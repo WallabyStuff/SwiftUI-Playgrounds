@@ -7,24 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		619A5C479FF5627104F5F4F7 /* Pods_StarbucksClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D82DAADD67FD7B4D1411408 /* Pods_StarbucksClone.framework */; };
+		8E4CA0E229E0769F001A6BDC /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */; };
+		8E4CA0E529E097DB001A6BDC /* Int+PriceExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */; };
 		8E529CDE29DD234A0059BE4F /* StarbucksCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */; };
-		8E529CE029DD234A0059BE4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CDF29DD234A0059BE4F /* ContentView.swift */; };
+		8E529CE029DD234A0059BE4F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CDF29DD234A0059BE4F /* MainTabView.swift */; };
 		8E529CE229DD234C0059BE4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E529CE129DD234C0059BE4F /* Assets.xcassets */; };
 		8E529CE529DD234C0059BE4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E529CE429DD234C0059BE4F /* Preview Assets.xcassets */; };
-		8E529CED29DD23780059BE4F /* MainBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CEC29DD23780059BE4F /* MainBanner.swift */; };
-		8E529CEF29DD26C00059BE4F /* WhatsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CEE29DD26C00059BE4F /* WhatsNew.swift */; };
+		8E529CED29DD23780059BE4F /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CEC29DD23780059BE4F /* Banner.swift */; };
+		8E529CEF29DD26C00059BE4F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CEE29DD26C00059BE4F /* Event.swift */; };
 		8E529CF129DD2AAE0059BE4F /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CF029DD2AAE0059BE4F /* Beverage.swift */; };
+		8E529D3229DDCE5B0059BE4F /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D3129DDCE5B0059BE4F /* LaunchScreen.swift */; };
+		8E529D4329DDD9E50059BE4F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D4229DDD9E50059BE4F /* R.generated.swift */; };
+		8E529D4529DDDEE60059BE4F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D4429DDDEE60059BE4F /* MainView.swift */; };
+		8E529D4729DDF3F50059BE4F /* OrderCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D4629DDF3F50059BE4F /* OrderCategoryView.swift */; };
+		8E529D4A29DDF4FC0059BE4F /* BeverageCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D4929DDF4FC0059BE4F /* BeverageCategoryCell.swift */; };
+		8E529D4C29DDF96C0059BE4F /* BottomLocationSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D4B29DDF96C0059BE4F /* BottomLocationSelectorView.swift */; };
+		8E529D4E29DE72350059BE4F /* OrderCategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D4D29DE72350059BE4F /* OrderCategoryDetailView.swift */; };
+		8E529D5029DE72500059BE4F /* BeverageMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D4F29DE72500059BE4F /* BeverageMenuCell.swift */; };
+		8E529D5229DED6510059BE4F /* RecommendMenuSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D5129DED6510059BE4F /* RecommendMenuSectionHeader.swift */; };
+		8E529D5429DEDA080059BE4F /* RecommendMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D5329DEDA080059BE4F /* RecommendMenuCell.swift */; };
+		8E529D5629DEE2800059BE4F /* LargeTitleSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D5529DEE2800059BE4F /* LargeTitleSectionHeader.swift */; };
+		8E529D5829DEE43E0059BE4F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D5729DEE43E0059BE4F /* EventCell.swift */; };
+		8E529D5A29DFEF720059BE4F /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D5929DFEF720059BE4F /* MenuDetailView.swift */; };
+		8E529D6029DFF7BE0059BE4F /* TemperatureOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D5F29DFF7BE0059BE4F /* TemperatureOptionView.swift */; };
+		8E529D6229DFFB310059BE4F /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D6129DFFB310059BE4F /* CapsuleView.swift */; };
+		8E529D6629E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D6529E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift */; };
+		8E529D6829E00BC10059BE4F /* DescriptionTextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D6729E00BC10059BE4F /* DescriptionTextBox.swift */; };
+		8E529D6A29E0193F0059BE4F /* SizeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529D6929E0193F0059BE4F /* SizeOptionCell.swift */; };
+		8EC8F61C29E0262C003F032E /* SizeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8F61B29E0262C003F032E /* SizeSelectorView.swift */; };
+		8EC8F61E29E02A61003F032E /* MenuOptionSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8F61D29E02A61003F032E /* MenuOptionSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27C6B1E2F3CD4383E589BACC /* Pods-StarbucksClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.release.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.release.xcconfig"; sourceTree = "<group>"; };
+		4AA90B74C626B64ADD1AEDF1 /* Pods-StarbucksClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.debug.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.debug.xcconfig"; sourceTree = "<group>"; };
+		8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+PriceExpression.swift"; sourceTree = "<group>"; };
 		8E529CDA29DD234A0059BE4F /* StarbucksClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksCloneApp.swift; sourceTree = "<group>"; };
-		8E529CDF29DD234A0059BE4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8E529CDF29DD234A0059BE4F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8E529CE129DD234C0059BE4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E529CE429DD234C0059BE4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8E529CEC29DD23780059BE4F /* MainBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBanner.swift; sourceTree = "<group>"; };
-		8E529CEE29DD26C00059BE4F /* WhatsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNew.swift; sourceTree = "<group>"; };
+		8E529CEC29DD23780059BE4F /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		8E529CEE29DD26C00059BE4F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8E529CF029DD2AAE0059BE4F /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		8E529D3129DDCE5B0059BE4F /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		8E529D4229DDD9E50059BE4F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8E529D4429DDDEE60059BE4F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8E529D4629DDF3F50059BE4F /* OrderCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCategoryView.swift; sourceTree = "<group>"; };
+		8E529D4929DDF4FC0059BE4F /* BeverageCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCategoryCell.swift; sourceTree = "<group>"; };
+		8E529D4B29DDF96C0059BE4F /* BottomLocationSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLocationSelectorView.swift; sourceTree = "<group>"; };
+		8E529D4D29DE72350059BE4F /* OrderCategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCategoryDetailView.swift; sourceTree = "<group>"; };
+		8E529D4F29DE72500059BE4F /* BeverageMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageMenuCell.swift; sourceTree = "<group>"; };
+		8E529D5129DED6510059BE4F /* RecommendMenuSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMenuSectionHeader.swift; sourceTree = "<group>"; };
+		8E529D5329DEDA080059BE4F /* RecommendMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMenuCell.swift; sourceTree = "<group>"; };
+		8E529D5529DEE2800059BE4F /* LargeTitleSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTitleSectionHeader.swift; sourceTree = "<group>"; };
+		8E529D5729DEE43E0059BE4F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		8E529D5929DFEF720059BE4F /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
+		8E529D5F29DFF7BE0059BE4F /* TemperatureOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureOptionView.swift; sourceTree = "<group>"; };
+		8E529D6129DFFB310059BE4F /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
+		8E529D6529E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureOptionSegmentedControl.swift; sourceTree = "<group>"; };
+		8E529D6729E00BC10059BE4F /* DescriptionTextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextBox.swift; sourceTree = "<group>"; };
+		8E529D6929E0193F0059BE4F /* SizeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeOptionCell.swift; sourceTree = "<group>"; };
+		8EC8F61B29E0262C003F032E /* SizeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectorView.swift; sourceTree = "<group>"; };
+		8EC8F61D29E02A61003F032E /* MenuOptionSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionSectionView.swift; sourceTree = "<group>"; };
+		9D82DAADD67FD7B4D1411408 /* Pods_StarbucksClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarbucksClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +80,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619A5C479FF5627104F5F4F7 /* Pods_StarbucksClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		485FBDE889662DA65C75045F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D82DAADD67FD7B4D1411408 /* Pods_StarbucksClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73B892EF28CDC6EECEA5A72F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AA90B74C626B64ADD1AEDF1 /* Pods-StarbucksClone.debug.xcconfig */,
+				27C6B1E2F3CD4383E589BACC /* Pods-StarbucksClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E4CA0E329E097C9001A6BDC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		8E529CD129DD234A0059BE4F = {
 			isa = PBXGroup;
 			children = (
 				8E529CDC29DD234A0059BE4F /* StarbucksClone */,
 				8E529CDB29DD234A0059BE4F /* Products */,
+				73B892EF28CDC6EECEA5A72F /* Pods */,
+				485FBDE889662DA65C75045F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +133,11 @@
 		8E529CDC29DD234A0059BE4F /* StarbucksClone */ = {
 			isa = PBXGroup;
 			children = (
-				8E529CEB29DD23590059BE4F /* Models */,
+				8E4CA0E329E097C9001A6BDC /* Utils */,
 				8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */,
-				8E529CDF29DD234A0059BE4F /* ContentView.swift */,
+				8E529CEB29DD23590059BE4F /* Models */,
+				8E529D3029DDCE520059BE4F /* Views */,
+				8E529D4129DDD9920059BE4F /* SupportingFiles */,
 				8E529CE129DD234C0059BE4F /* Assets.xcassets */,
 				8E529CE329DD234C0059BE4F /* Preview Content */,
 			);
@@ -77,11 +155,55 @@
 		8E529CEB29DD23590059BE4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8E529CEC29DD23780059BE4F /* MainBanner.swift */,
-				8E529CEE29DD26C00059BE4F /* WhatsNew.swift */,
+				8E529CEC29DD23780059BE4F /* Banner.swift */,
+				8E529CEE29DD26C00059BE4F /* Event.swift */,
 				8E529CF029DD2AAE0059BE4F /* Beverage.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8E529D3029DDCE520059BE4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E529D3129DDCE5B0059BE4F /* LaunchScreen.swift */,
+				8E529CDF29DD234A0059BE4F /* MainTabView.swift */,
+				8E529D4429DDDEE60059BE4F /* MainView.swift */,
+				8E529D4629DDF3F50059BE4F /* OrderCategoryView.swift */,
+				8E529D4D29DE72350059BE4F /* OrderCategoryDetailView.swift */,
+				8E529D4B29DDF96C0059BE4F /* BottomLocationSelectorView.swift */,
+				8E529D5929DFEF720059BE4F /* MenuDetailView.swift */,
+				8E529D5F29DFF7BE0059BE4F /* TemperatureOptionView.swift */,
+				8E529D6129DFFB310059BE4F /* CapsuleView.swift */,
+				8E529D6529E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift */,
+				8E529D6729E00BC10059BE4F /* DescriptionTextBox.swift */,
+				8EC8F61B29E0262C003F032E /* SizeSelectorView.swift */,
+				8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */,
+				8E529D4829DDF4F40059BE4F /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E529D4129DDD9920059BE4F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8E529D4229DDD9E50059BE4F /* R.generated.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8E529D4829DDF4F40059BE4F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8E529D4929DDF4FC0059BE4F /* BeverageCategoryCell.swift */,
+				8E529D4F29DE72500059BE4F /* BeverageMenuCell.swift */,
+				8E529D5129DED6510059BE4F /* RecommendMenuSectionHeader.swift */,
+				8E529D5329DEDA080059BE4F /* RecommendMenuCell.swift */,
+				8E529D5529DEE2800059BE4F /* LargeTitleSectionHeader.swift */,
+				8E529D5729DEE43E0059BE4F /* EventCell.swift */,
+				8E529D6929E0193F0059BE4F /* SizeOptionCell.swift */,
+				8EC8F61D29E02A61003F032E /* MenuOptionSectionView.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E529CE829DD234C0059BE4F /* Build configuration list for PBXNativeTarget "StarbucksClone" */;
 			buildPhases = (
+				E89429D52ECED3D4736AF95D /* [CP] Check Pods Manifest.lock */,
+				8E529D4029DDD95B0059BE4F /* R.swift */,
 				8E529CD629DD234A0059BE4F /* Sources */,
 				8E529CD729DD234A0059BE4F /* Frameworks */,
 				8E529CD829DD234A0059BE4F /* Resources */,
+				8D2769796865B67EDA38B2AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,16 +274,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D2769796865B67EDA38B2AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E529D4029DDD95B0059BE4F /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		E89429D52ECED3D4736AF95D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarbucksClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E529CD629DD234A0059BE4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8E529CF129DD2AAE0059BE4F /* Beverage.swift in Sources */,
-				8E529CE029DD234A0059BE4F /* ContentView.swift in Sources */,
+				8E529D4C29DDF96C0059BE4F /* BottomLocationSelectorView.swift in Sources */,
+				8E529D4529DDDEE60059BE4F /* MainView.swift in Sources */,
+				8E529D5629DEE2800059BE4F /* LargeTitleSectionHeader.swift in Sources */,
+				8E529D4329DDD9E50059BE4F /* R.generated.swift in Sources */,
+				8E529D5829DEE43E0059BE4F /* EventCell.swift in Sources */,
+				8E529D5029DE72500059BE4F /* BeverageMenuCell.swift in Sources */,
+				8E529D4E29DE72350059BE4F /* OrderCategoryDetailView.swift in Sources */,
+				8E529D6A29E0193F0059BE4F /* SizeOptionCell.swift in Sources */,
+				8E529CE029DD234A0059BE4F /* MainTabView.swift in Sources */,
+				8E529D6829E00BC10059BE4F /* DescriptionTextBox.swift in Sources */,
+				8E529D4A29DDF4FC0059BE4F /* BeverageCategoryCell.swift in Sources */,
+				8EC8F61E29E02A61003F032E /* MenuOptionSectionView.swift in Sources */,
+				8E529D5429DEDA080059BE4F /* RecommendMenuCell.swift in Sources */,
+				8E529D4729DDF3F50059BE4F /* OrderCategoryView.swift in Sources */,
+				8E529D5A29DFEF720059BE4F /* MenuDetailView.swift in Sources */,
+				8E529D3229DDCE5B0059BE4F /* LaunchScreen.swift in Sources */,
+				8EC8F61C29E0262C003F032E /* SizeSelectorView.swift in Sources */,
+				8E529D5229DED6510059BE4F /* RecommendMenuSectionHeader.swift in Sources */,
 				8E529CDE29DD234A0059BE4F /* StarbucksCloneApp.swift in Sources */,
-				8E529CEF29DD26C00059BE4F /* WhatsNew.swift in Sources */,
-				8E529CED29DD23780059BE4F /* MainBanner.swift in Sources */,
+				8E529D6229DFFB310059BE4F /* CapsuleView.swift in Sources */,
+				8E529D6029DFF7BE0059BE4F /* TemperatureOptionView.swift in Sources */,
+				8E4CA0E229E0769F001A6BDC /* SegmentedControl.swift in Sources */,
+				8E4CA0E529E097DB001A6BDC /* Int+PriceExpression.swift in Sources */,
+				8E529CEF29DD26C00059BE4F /* Event.swift in Sources */,
+				8E529CED29DD23780059BE4F /* Banner.swift in Sources */,
+				8E529D6629E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -269,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -281,6 +490,7 @@
 		};
 		8E529CE929DD234C0059BE4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA90B74C626B64ADD1AEDF1 /* Pods-StarbucksClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +520,7 @@
 		};
 		8E529CEA29DD234C0059BE4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27C6B1E2F3CD4383E589BACC /* Pods-StarbucksClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

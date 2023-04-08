@@ -11,7 +11,8 @@ import SwiftUI
 struct StarbucksCloneApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      LaunchScreen()
+        .preferredColorScheme(.light)
     }
   }
 }
