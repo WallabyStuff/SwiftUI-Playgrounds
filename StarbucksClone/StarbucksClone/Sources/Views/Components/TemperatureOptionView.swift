@@ -9,8 +9,11 @@ import SwiftUI
 
 struct TemperatureOptionView: View {
   
+  // MARK: - Properties
+  
   @State var selectedIndex = 0
   @Binding var selectedOption: Beverage.TemperatureOption
+  
   var temperatureOptionType: Beverage.TemperatureOptionType {
     didSet {
       switch temperatureOptionType {
@@ -24,13 +27,16 @@ struct TemperatureOptionView: View {
     }
   }
   
+  
+  // MARK: - Views
+  
   var body: some View {
     VStack {
       switch temperatureOptionType {
       case .hotOnly:
-        CapsuleView(title: "HOT ONLY", color: Color(R.color.accentRed))
+        CapsuleView(title: Beverage.TemperatureOptionType.hotOnly.rawValue, color: Color(R.color.accentRed))
       case .icedOnly:
-        CapsuleView(title: "COLD ONLY", color: Color(R.color.accentBlue))
+        CapsuleView(title: Beverage.TemperatureOptionType.icedOnly.rawValue, color: Color(R.color.accentBlue))
       case .free:
         TemperatureOptionSegmentedControl(selectedTemperatureOption: $selectedOption)
       }
@@ -38,6 +44,9 @@ struct TemperatureOptionView: View {
     
   }
 }
+
+
+// MARK: - Preview
 
 struct TemperatureOptionView_Previews: PreviewProvider {
   static var previews: some View {
@@ -63,6 +72,5 @@ struct TemperatureOptionView_Previews: PreviewProvider {
           temperatureOptionType: .hotOnly)
       }
     }
-    
   }
 }

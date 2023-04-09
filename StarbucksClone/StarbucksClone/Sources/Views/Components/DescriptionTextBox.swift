@@ -9,21 +9,38 @@ import SwiftUI
 
 struct DescriptionTextBox: View {
   
+  // MARK: - Constants
+  
+  enum Metric {
+    static let contentSpacing = 0.f
+    static let fontSize = 11.f
+    static let padding = 16.f
+    static let cornerRadius = 10.f
+  }
+  
+  // MARK: - Properties
+  
   var text: String
   
+  
+  // MARK: - Views
+  
   var body: some View {
-    VStack(spacing: 0) {
+    VStack(spacing: Metric.contentSpacing) {
       Text(text)
         .multilineTextAlignment(.leading)
-        .font(.system(size: 11))
+        .font(.system(size: Metric.fontSize))
         .frame(maxWidth: .infinity, alignment: .leading)
         .foregroundColor(Color(R.color.textBase))
-        .padding(16)
+        .padding(Metric.padding)
     }
     .background(Color(R.color.backgroundSecondary))
-    .cornerRadius(10)
+    .cornerRadius(Metric.cornerRadius)
   }
 }
+
+
+// MARK: - Preview
 
 struct DescriptionTextBox_Previews: PreviewProvider {
   static var previews: some View {

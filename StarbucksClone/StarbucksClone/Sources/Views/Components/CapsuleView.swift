@@ -9,21 +9,37 @@ import SwiftUI
 
 struct CapsuleView: View {
   
+  // MARK: - Constants
+  
+  enum Metric {
+    static let fontSize = 15.f
+    static let minHeight = 44.f
+    static let lineWidth = 1.5.f
+  }
+  
+  
+  // MARK: - Properties
+  
   var title: String
   var color: Color
   
+
+  // MARK: - Views
+  
   var body: some View {
     Text(title)
-      .font(.system(size: 15, weight: .semibold))
-      .frame(maxWidth: .infinity, minHeight: 44)
+      .font(.system(size: Metric.fontSize, weight: .semibold))
+      .frame(maxWidth: .infinity, minHeight: Metric.minHeight)
       .foregroundColor(color)
       .background(Color.clear)
       .overlay(
         Capsule()
-          .stroke(color, lineWidth: 1.5)
+          .stroke(color, lineWidth: Metric.lineWidth)
       )
   }
 }
+
+// MARK: - Preview
 
 struct CapsuleView_Previews: PreviewProvider {
   static var previews: some View {

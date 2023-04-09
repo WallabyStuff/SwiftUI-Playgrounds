@@ -12,8 +12,13 @@ import Lottie
 
 struct LottieView: UIViewRepresentable {
   
+  // MARK: - Properties
+  
   var name: String
   let animationView = LottieAnimationView()
+  
+  
+  // MARK: - Methods
   
   func makeUIView(context: Context) -> some UIView {
     let view = UIView(frame: .zero)
@@ -35,6 +40,9 @@ struct LottieView: UIViewRepresentable {
     
   }
 }
+
+
+// MARK: - Preview
 
 struct LottieView_Previews: PreviewProvider {
   static var previews: some View {

@@ -9,18 +9,35 @@ import SwiftUI
 
 struct MenuOptionSectionView: View {
   
+  // MARK: - Constants
+  
+  enum Metric {
+    static let lineLimit = 2
+    static let fontSize = 15.f
+    static let verticalPadding = 12.f
+  }
+  
+  
+  // MARK: - Properties
+  
   var title: String
+  
+  
+  // MARK: - Views
   
   var body: some View {
     Text(title)
       .multilineTextAlignment(.leading)
-      .lineLimit(2)
-      .font(.system(size: 15, weight: .bold))
+      .lineLimit(Metric.lineLimit)
+      .font(.system(size: Metric.fontSize, weight: .bold))
       .foregroundColor(Color(R.color.textBase))
-      .padding(.vertical, 12)
+      .padding(.vertical, Metric.verticalPadding)
       .frame(maxWidth: .infinity, alignment: .leading)
   }
 }
+
+
+// MARK: - Preview
 
 struct MenuOptionSectionView_Previews: PreviewProvider {
   static var previews: some View {

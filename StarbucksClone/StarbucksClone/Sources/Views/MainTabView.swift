@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainTabView: View {
   
+  // MARK: - Views
+  
   var body: some View {
     NavigationView {
       TabView {
@@ -39,6 +41,9 @@ struct MainTabView: View {
     }
   }
 }
+
+
+// MARK: - Preview
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {

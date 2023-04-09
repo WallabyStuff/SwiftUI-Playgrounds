@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct BottomLocationSelectorView: View {
+  
+  // MARK: - Constants
+  
+  enum Metric {
+    static let horizontalPadding = 20.f
+    
+    static let contentSpacing = 20.f
+    
+    static let locationSelectButtonFontSize = 12.f
+    static let chevronImageSize = 16.f
+    static let locationSelectButtonHeight = 36.f
+    static let locationSelectButtonPadding = 12.f
+    static let locationSelectButtonCornerRadius = 10.f
+    
+    static let cartImageButtonSize = 36.f
+    static let cartImagePadding = 6.f
+  }
+  
+  // MARK: - Views
+  
   var body: some View {
     HStack {
       Button {
         
       } label: {
-        HStack(spacing: 20) {
+        HStack(spacing: Metric.contentSpacing) {
           Text("주문할 매장을 선택해 주세요.")
-            .font(.system(size: 12))
+            .font(.system(size: Metric.locationSelectButtonFontSize))
             .fontWeight(.semibold)
           
           Spacer()
@@ -23,14 +43,15 @@ struct BottomLocationSelectorView: View {
           Image(R.image.arrowRight)
             .resizable()
             .scaledToFit()
-            .frame(width: 16, height: 16)
+            .frame(width: Metric.chevronImageSize,
+                   height: Metric.chevronImageSize)
         }
-        .frame(height: 36)
-        .padding(.horizontal, 12)
+        .frame(height: Metric.locationSelectButtonHeight)
+        .padding(.horizontal, Metric.locationSelectButtonPadding)
         .foregroundColor(Color(R.color.textWhite))
       }
       .background(Color(R.color.accentBlackSecondary))
-      .cornerRadius(10)
+      .cornerRadius(Metric.locationSelectButtonCornerRadius)
       
       Button {
         
@@ -38,15 +59,19 @@ struct BottomLocationSelectorView: View {
         Image(R.image.bascket)
           .resizable()
           .scaledToFit()
-          .padding(6)
-          .frame(width: 36, height: 36)
+          .padding(Metric.cartImagePadding)
+          .frame(width: Metric.cartImageButtonSize,
+                 height: Metric.cartImageButtonSize)
       }
     }
-    .padding(.horizontal, 20)
+    .padding(.horizontal, Metric.horizontalPadding)
     .frame(height: 60)
     .background(Color(R.color.accentBlack))
   }
 }
+
+
+// MARK: - Preview
 
 struct BottomLocationSelectorView_Previews: PreviewProvider {
   static var previews: some View {

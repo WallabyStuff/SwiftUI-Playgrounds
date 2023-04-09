@@ -9,42 +9,75 @@ import SwiftUI
 
 struct QuantityCounterView: View {
   
+  // MARK: - Constants
+  
+  enum Metric {
+    static let height = 28.f
+    
+    static let buttonSize = 28.f
+    static let buttonPadding = 2.f
+    static let buttonDisabledOpacity = 0.3.f
+    static let buttonEnabledOpacity = 1.0.f
+    
+    static let quantityFontSize = 20.f
+    static let quantityTextWidth = 40.f
+  }
+  
+  
+  // MARK: - Properties
+  
   @Binding var quantity: Int
   var minQuantity: Int
   var maxQuantity: Int
   
+  
+  // MARK: - Views
+  
   var body: some View {
     HStack {
       Button() {
-        quantity -= 1
+        decreaseQuantity()
       } label: {
         Image(R.image.minusCircle)
           .resizable()
           .scaledToFit()
-          .frame(width: 28, height: 28)
-          .padding(2)
+          .frame(width: Metric.buttonSize,
+                 height: Metric.buttonSize)
+          .padding(Metric.buttonPadding)
       }
       .disabled(quantity == minQuantity ? true : false)
-      .opacity(quantity == minQuantity ? 0.3 : 1.0)
+      .opacity(quantity == minQuantity ? Metric.buttonDisabledOpacity : Metric.buttonEnabledOpacity)
 
       Text("\(quantity)")
-        .font(.system(size: 20, weight: .bold))
-        .frame(width: 40)
+        .font(.system(size: Metric.quantityFontSize, weight: .bold))
+        .frame(width: Metric.quantityTextWidth)
       
       Button() {
-        quantity += 1
+        increaseQuantity()
       } label: {
         Image(R.image.addCircle)
           .resizable()
           .scaledToFit()
-          .frame(width: 28, height: 28)
-          .padding(2)
+          .frame(width: Metric.buttonSize,
+                 height: Metric.buttonSize)
+          .padding(Metric.buttonPadding)
       }
       .disabled(quantity == maxQuantity ? true : false)
-      .opacity(quantity == maxQuantity ? 0.3 : 1.0)
+      .opacity(quantity == maxQuantity ? Metric.buttonDisabledOpacity : Metric.buttonEnabledOpacity)
     }
-    .frame(height: 28)
     .foregroundColor(Color(R.color.iconWhite))
+    .frame(height: Metric.height)
+  }
+  
+  
+  // MARK: - Methods
+  
+  private func increaseQuantity() {
+    quantity += 1
+  }
+  
+  private func decreaseQuantity() {
+    quantity -= 1
   }
 }
 

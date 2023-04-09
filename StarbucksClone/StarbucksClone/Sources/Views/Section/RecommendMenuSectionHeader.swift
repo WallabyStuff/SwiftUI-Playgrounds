@@ -9,22 +9,42 @@ import SwiftUI
 
 struct RecommendMenuSectionHeader: View {
   
+  // MARK: - Constants
+  
+  enum Constants {
+    static let headerTitle = "님을 위한 추천메뉴"
+  }
+  
+  enum Metric {
+    static let padding = 20.f
+    static let fontSize = 20.f
+    static let textSpacing = 4.f
+  }
+  
+  // MARK: - Properties
+  
   var name: String
   
+  
+  // MARK: - Views
+  
   var body: some View {
-    HStack(spacing: 4) {
+    HStack(spacing: Metric.textSpacing) {
       Text(name)
         .foregroundColor(Color(R.color.accentBrown))
-      Text("님을 위한 추천메뉴")
+      Text(Constants.headerTitle)
         .foregroundColor(Color(R.color.textBase))
       
       Spacer()
     }
-    .font(.system(size: 20, weight: .bold))
-    .padding(20)
+    .font(.system(size: Metric.fontSize, weight: .bold))
+    .padding(Metric.padding)
     .background(Color(R.color.backgroundBase))
   }
 }
+
+
+// MARK: - Preview
 
 struct SectionHeader_Previews: PreviewProvider {
   static var previews: some View {

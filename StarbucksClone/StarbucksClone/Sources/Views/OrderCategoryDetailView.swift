@@ -9,8 +9,24 @@ import SwiftUI
 
 struct OrderCategoryDetailView: View {
   
+  // MARK: - Constants
+  
+  enum Metric {
+    static let cellSpacing = 0.f
+    static let bottomInset = 100.f
+    
+    static let toolbarButtonPadding = 8.f
+    static let toolbarButtonSize = 36.f
+  }
+  
+  
+  // MARK: - Properties
+  
   var category: Beverage.Category
   @Environment(\.presentationMode) var presentationMode
+  
+  
+  // MARK: - Views
   
   var body: some View {
     NavigationView {
@@ -19,7 +35,7 @@ struct OrderCategoryDetailView: View {
           .ignoresSafeArea()
         
         ScrollView {
-          LazyVStack(spacing: 0) {
+          LazyVStack(spacing: Metric.cellSpacing) {
             ForEach(category.beverages, id: \.id) { beverage in
               NavigationLink {
                 MenuDetailView(menu: beverage)
@@ -29,7 +45,7 @@ struct OrderCategoryDetailView: View {
               }
             }
           }
-          .padding(.bottom, 140)
+          .padding(.bottom, Metric.bottomInset)
         }
         
         VStack {
@@ -46,9 +62,10 @@ struct OrderCategoryDetailView: View {
             Image(R.image.chevronLeft)
               .resizable()
               .scaledToFit()
-              .padding(8)
-              .frame(width: 36, height: 36)
-              .foregroundColor(Color(R.color.textBase))
+              .padding(Metric.toolbarButtonPadding)
+              .frame(width: Metric.toolbarButtonSize,
+                     height: Metric.toolbarButtonSize)
+              .foregroundColor(Color(R.color.iconBase))
           }
         }
         
@@ -59,9 +76,10 @@ struct OrderCategoryDetailView: View {
             Image(R.image.magnifyingGlass)
               .resizable()
               .scaledToFit()
-              .padding(8)
-              .frame(width: 36, height: 36)
-              .foregroundColor(Color(R.color.textBase))
+              .padding(Metric.toolbarButtonPadding)
+              .frame(width: Metric.toolbarButtonSize,
+                     height: Metric.toolbarButtonSize)
+              .foregroundColor(Color(R.color.iconBase))
           }
         }
       }
@@ -69,6 +87,9 @@ struct OrderCategoryDetailView: View {
     .navigationBarBackButtonHidden(true)
   }
 }
+
+
+// MARK: - Preview
 
 struct OrderCategoryDetailView_Previews: PreviewProvider {
   static var previews: some View {

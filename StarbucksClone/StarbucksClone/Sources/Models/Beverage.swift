@@ -18,10 +18,10 @@ struct Beverage {
     case milk, soybean, wheat, peanut, squid, egg
   }
   
-  enum TemperatureOptionType {
-    case hotOnly
-    case icedOnly
-    case free
+  enum TemperatureOptionType: String {
+    case hotOnly = "HOT ONLY"
+    case icedOnly = "ICDED ONLY"
+    case free = "FREE"
   }
   
   enum TemperatureOption: String, CaseIterable {

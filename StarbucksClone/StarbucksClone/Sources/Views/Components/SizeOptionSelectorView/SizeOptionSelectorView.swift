@@ -1,5 +1,5 @@
 //
-//  SizeSelectorView.swift
+//  SizeOptionSelectorView.swift
 //  StarbucksClone
 //
 //  Created by 이승기 on 2023/04/07.
@@ -7,18 +7,23 @@
 
 import SwiftUI
 
-struct SizeSelectorView: View {
+struct SizeOptionSelectorView: View {
+  
+  // MARK: - Properties
   
   @Binding var selectedSizeOption: Beverage.SizeOption
+  
+  
+  // MARK: - Views
   
   var body: some View {
     HStack(spacing: 8) {
       ForEach(Beverage.SizeOption.allCases, id: \.self) { size in
         ZStack {
           if selectedSizeOption == size {
-            SizeOptionCell(sizeOption: size, isHighlighted: true)
+            SizeOptionItem(sizeOption: size, isHighlighted: true)
           } else {
-            SizeOptionCell(sizeOption: size, isHighlighted: false)
+            SizeOptionItem(sizeOption: size, isHighlighted: false)
           }
         }
         .onTapGesture {
@@ -31,11 +36,13 @@ struct SizeSelectorView: View {
   }
 }
 
+
+// MARK: - Preview
+
 struct SizeSelectorView_Previews: PreviewProvider {
-  
   static var previews: some View {
     VStack {
-      SizeSelectorView(selectedSizeOption: .constant(.tall))
+      SizeOptionSelectorView(selectedSizeOption: .constant(.tall))
     }
   }
 }
