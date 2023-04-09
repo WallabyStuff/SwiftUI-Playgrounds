@@ -13,11 +13,15 @@ struct _R {
   let bundle: Foundation.Bundle
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
   func image(bundle: Foundation.Bundle) -> image {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func validate() throws {
@@ -381,5 +385,13 @@ struct _R {
 
     /// Image `tumbler`.
     var tumbler: RswiftResources.ImageResource { .init(name: "tumbler", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `bean_loading.json`.
+    var bean_loadingJson: RswiftResources.FileResource { .init(name: "bean_loading", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
   }
 }

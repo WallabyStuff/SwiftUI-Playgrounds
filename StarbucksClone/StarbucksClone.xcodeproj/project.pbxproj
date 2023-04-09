@@ -10,6 +10,11 @@
 		619A5C479FF5627104F5F4F7 /* Pods_StarbucksClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D82DAADD67FD7B4D1411408 /* Pods_StarbucksClone.framework */; };
 		8E4CA0E229E0769F001A6BDC /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */; };
 		8E4CA0E529E097DB001A6BDC /* Int+PriceExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */; };
+		8E4CA0E929E1B792001A6BDC /* bean_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E829E1B792001A6BDC /* bean_loading.json */; };
+		8E4CA0EC29E1B8F0001A6BDC /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0EB29E1B8F0001A6BDC /* LottieView.swift */; };
+		8E4CA0EE29E1C0AE001A6BDC /* UINavigationController+SwipeBackGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0ED29E1C0AE001A6BDC /* UINavigationController+SwipeBackGesture.swift */; };
+		8E4CA0F029E2B9D2001A6BDC /* MenuOrderToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0EF29E2B9D2001A6BDC /* MenuOrderToolBar.swift */; };
+		8E4CA0F229E2BAAB001A6BDC /* QuantityCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0F129E2BAAB001A6BDC /* QuantityCounterView.swift */; };
 		8E529CDE29DD234A0059BE4F /* StarbucksCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */; };
 		8E529CE029DD234A0059BE4F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529CDF29DD234A0059BE4F /* MainTabView.swift */; };
 		8E529CE229DD234C0059BE4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E529CE129DD234C0059BE4F /* Assets.xcassets */; };
@@ -44,6 +49,11 @@
 		4AA90B74C626B64ADD1AEDF1 /* Pods-StarbucksClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.debug.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.debug.xcconfig"; sourceTree = "<group>"; };
 		8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+PriceExpression.swift"; sourceTree = "<group>"; };
+		8E4CA0E829E1B792001A6BDC /* bean_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bean_loading.json; sourceTree = "<group>"; };
+		8E4CA0EB29E1B8F0001A6BDC /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		8E4CA0ED29E1C0AE001A6BDC /* UINavigationController+SwipeBackGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SwipeBackGesture.swift"; sourceTree = "<group>"; };
+		8E4CA0EF29E2B9D2001A6BDC /* MenuOrderToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrderToolBar.swift; sourceTree = "<group>"; };
+		8E4CA0F129E2BAAB001A6BDC /* QuantityCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityCounterView.swift; sourceTree = "<group>"; };
 		8E529CDA29DD234A0059BE4F /* StarbucksClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksCloneApp.swift; sourceTree = "<group>"; };
 		8E529CDF29DD234A0059BE4F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -108,8 +118,48 @@
 			isa = PBXGroup;
 			children = (
 				8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */,
+				8E4CA0ED29E1C0AE001A6BDC /* UINavigationController+SwipeBackGesture.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8E4CA0E629E1B55F001A6BDC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8E529D6129DFFB310059BE4F /* CapsuleView.swift */,
+				8E529D6529E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift */,
+				8E529D6729E00BC10059BE4F /* DescriptionTextBox.swift */,
+				8EC8F61B29E0262C003F032E /* SizeSelectorView.swift */,
+				8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */,
+				8E529D4B29DDF96C0059BE4F /* BottomLocationSelectorView.swift */,
+				8E529D5F29DFF7BE0059BE4F /* TemperatureOptionView.swift */,
+				8E4CA0EB29E1B8F0001A6BDC /* LottieView.swift */,
+				8E4CA0EF29E2B9D2001A6BDC /* MenuOrderToolBar.swift */,
+				8E4CA0F129E2BAAB001A6BDC /* QuantityCounterView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8E4CA0E729E1B784001A6BDC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E4CA0E829E1B792001A6BDC /* bean_loading.json */,
+				8E529CE129DD234C0059BE4F /* Assets.xcassets */,
+				8E529CE329DD234C0059BE4F /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E4CA0EA29E1B798001A6BDC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */,
+				8E529CEB29DD23590059BE4F /* Models */,
+				8E529D3029DDCE520059BE4F /* Views */,
+				8E4CA0E329E097C9001A6BDC /* Utils */,
+				8E529D4129DDD9920059BE4F /* SupportingFiles */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		8E529CD129DD234A0059BE4F = {
@@ -133,13 +183,8 @@
 		8E529CDC29DD234A0059BE4F /* StarbucksClone */ = {
 			isa = PBXGroup;
 			children = (
-				8E4CA0E329E097C9001A6BDC /* Utils */,
-				8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */,
-				8E529CEB29DD23590059BE4F /* Models */,
-				8E529D3029DDCE520059BE4F /* Views */,
-				8E529D4129DDD9920059BE4F /* SupportingFiles */,
-				8E529CE129DD234C0059BE4F /* Assets.xcassets */,
-				8E529CE329DD234C0059BE4F /* Preview Content */,
+				8E4CA0EA29E1B798001A6BDC /* Sources */,
+				8E4CA0E729E1B784001A6BDC /* Resources */,
 			);
 			path = StarbucksClone;
 			sourceTree = "<group>";
@@ -170,14 +215,8 @@
 				8E529D4429DDDEE60059BE4F /* MainView.swift */,
 				8E529D4629DDF3F50059BE4F /* OrderCategoryView.swift */,
 				8E529D4D29DE72350059BE4F /* OrderCategoryDetailView.swift */,
-				8E529D4B29DDF96C0059BE4F /* BottomLocationSelectorView.swift */,
 				8E529D5929DFEF720059BE4F /* MenuDetailView.swift */,
-				8E529D5F29DFF7BE0059BE4F /* TemperatureOptionView.swift */,
-				8E529D6129DFFB310059BE4F /* CapsuleView.swift */,
-				8E529D6529E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift */,
-				8E529D6729E00BC10059BE4F /* DescriptionTextBox.swift */,
-				8EC8F61B29E0262C003F032E /* SizeSelectorView.swift */,
-				8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */,
+				8E4CA0E629E1B55F001A6BDC /* Components */,
 				8E529D4829DDF4F40059BE4F /* Cells */,
 			);
 			path = Views;
@@ -268,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E529CE529DD234C0059BE4F /* Preview Assets.xcassets in Resources */,
+				8E4CA0E929E1B792001A6BDC /* bean_loading.json in Resources */,
 				8E529CE229DD234C0059BE4F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,12 +390,15 @@
 				8E529D5029DE72500059BE4F /* BeverageMenuCell.swift in Sources */,
 				8E529D4E29DE72350059BE4F /* OrderCategoryDetailView.swift in Sources */,
 				8E529D6A29E0193F0059BE4F /* SizeOptionCell.swift in Sources */,
+				8E4CA0F029E2B9D2001A6BDC /* MenuOrderToolBar.swift in Sources */,
 				8E529CE029DD234A0059BE4F /* MainTabView.swift in Sources */,
 				8E529D6829E00BC10059BE4F /* DescriptionTextBox.swift in Sources */,
+				8E4CA0EC29E1B8F0001A6BDC /* LottieView.swift in Sources */,
 				8E529D4A29DDF4FC0059BE4F /* BeverageCategoryCell.swift in Sources */,
 				8EC8F61E29E02A61003F032E /* MenuOptionSectionView.swift in Sources */,
 				8E529D5429DEDA080059BE4F /* RecommendMenuCell.swift in Sources */,
 				8E529D4729DDF3F50059BE4F /* OrderCategoryView.swift in Sources */,
+				8E4CA0F229E2BAAB001A6BDC /* QuantityCounterView.swift in Sources */,
 				8E529D5A29DFEF720059BE4F /* MenuDetailView.swift in Sources */,
 				8E529D3229DDCE5B0059BE4F /* LaunchScreen.swift in Sources */,
 				8EC8F61C29E0262C003F032E /* SizeSelectorView.swift in Sources */,
@@ -367,6 +410,7 @@
 				8E4CA0E529E097DB001A6BDC /* Int+PriceExpression.swift in Sources */,
 				8E529CEF29DD26C00059BE4F /* Event.swift in Sources */,
 				8E529CED29DD23780059BE4F /* Banner.swift in Sources */,
+				8E4CA0EE29E1C0AE001A6BDC /* UINavigationController+SwipeBackGesture.swift in Sources */,
 				8E529D6629E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,7 +540,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StarbucksClone/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StarbucksClone/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -526,7 +570,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StarbucksClone/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StarbucksClone/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

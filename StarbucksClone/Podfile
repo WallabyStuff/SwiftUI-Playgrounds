@@ -7,5 +7,6 @@ target 'StarbucksClone' do
 
   # Pods for StarbucksClone
   pod 'R.swift'
+  pod 'lottie-ios'
 
 end
