@@ -58,72 +58,72 @@ struct MenuDetailView: View {
     NavigationView {
       ZStack {
         ScrollView() {
-          Image(uiImage: menu.thumbnailImage!)
-            .resizable()
-            .scaledToFill()
-          
-          VStack(alignment: .leading, spacing: Metric.contentSpacing) {
-            Text(menu.koreanName)
-              .multilineTextAlignment(.leading)
-              .frame(maxWidth: .infinity, alignment: .leading)
-              .font(.system(size: Metric.menuNameFontSize, weight: .bold))
-              .foregroundColor(Color(R.color.textBase))
+          VStack {
+            StretchableImageHeader(image: Image(uiImage: menu.thumbnailImage!))
             
-            Text(menu.name)
-              .multilineTextAlignment(.leading)
-              .font(.system(size: Metric.menuSubNameFontSize))
-              .frame(maxWidth: .infinity, alignment: .leading)
-              .foregroundColor(Color(R.color.textSecondary))
-              .padding(.top, Metric.menuSubNamePadding)
-            
-            Text(menu.description ?? "")
-              .multilineTextAlignment(.leading)
-              .font(.system(size: Metric.descriptionFontSize))
-              .foregroundColor(Color(R.color.textBase))
-              .padding(.top, Metric.descriptionPadding)
-            
-            TemperatureOptionView(
-              selectedOption: $temperatureOption,
-              temperatureOptionType: menu.temperatureOptionType)
-            .frame(maxWidth: .infinity)
-            .padding(.top, Metric.temperatureOptionTopPadding)
-            
-            DescriptionTextBox(text: menu.descriptionCaution ?? "")
+            VStack(alignment: .leading, spacing: Metric.contentSpacing) {
+              Text(menu.koreanName)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.system(size: Metric.menuNameFontSize, weight: .bold))
+                .foregroundColor(Color(R.color.textBase))
+              
+              Text(menu.name)
+                .multilineTextAlignment(.leading)
+                .font(.system(size: Metric.menuSubNameFontSize))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(Color(R.color.textSecondary))
+                .padding(.top, Metric.menuSubNamePadding)
+              
+              Text(menu.description ?? "")
+                .multilineTextAlignment(.leading)
+                .font(.system(size: Metric.descriptionFontSize))
+                .foregroundColor(Color(R.color.textBase))
+                .padding(.top, Metric.descriptionPadding)
+              
+              TemperatureOptionView(
+                selectedOption: $temperatureOption,
+                temperatureOptionType: menu.temperatureOptionType)
               .frame(maxWidth: .infinity)
-              .padding(.top, Metric.cautionBoxTopPadding)
-            
-            if menu.allergyFactor.isEmpty == false {
-              VStack(alignment: .leading, spacing: 8) {
-                Text("알러지 유발 요인")
-                  .multilineTextAlignment(.leading)
-                  .font(.system(size: Metric.allergyFactorFontSize, weight: .bold))
-                  .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Text(menu.allergyFactorDescription)
-                  .font(.system(size: Metric.allergyFactorDescriptionFontSize, weight: .medium))
-                  .frame(maxWidth: .infinity, alignment: .leading)
+              .padding(.top, Metric.temperatureOptionTopPadding)
+              
+              DescriptionTextBox(text: menu.descriptionCaution ?? "")
+                .frame(maxWidth: .infinity)
+                .padding(.top, Metric.cautionBoxTopPadding)
+              
+              if menu.allergyFactor.isEmpty == false {
+                VStack(alignment: .leading, spacing: 8) {
+                  Text("알러지 유발 요인")
+                    .multilineTextAlignment(.leading)
+                    .font(.system(size: Metric.allergyFactorFontSize, weight: .bold))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                  
+                  Text(menu.allergyFactorDescription)
+                    .font(.system(size: Metric.allergyFactorDescriptionFontSize, weight: .medium))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.top, Metric.allergyFactorTopPadding)
+                .frame(maxWidth: .infinity, alignment: .leading)
               }
-              .frame(maxWidth: .infinity)
-              .padding(.top, Metric.allergyFactorTopPadding)
-              .frame(maxWidth: .infinity, alignment: .leading)
+              
+              MenuOptionSectionView(title: "사이즈 선택")
+                .padding(.top, Metric.menuOptionSectionPadding)
+              SizeOptionSelectorView(selectedSizeOption: $selectedSize)
+                .frame(maxWidth: .infinity)
+              
+              MenuOptionSectionView(title: "컵 선택")
+                .padding(.top, Metric.menuOptionSectionPadding)
+              SegmentedControl(
+                selectedIndex: $cupOptionIndex,
+                options: ["개인컵", "매장컵", "일회용컵"])
+              .padding(.bottom, Metric.contentBottomSpacing)
             }
-            
-            MenuOptionSectionView(title: "사이즈 선택")
-              .padding(.top, Metric.menuOptionSectionPadding)
-            SizeOptionSelectorView(selectedSizeOption: $selectedSize)
-              .frame(maxWidth: .infinity)
-            
-            MenuOptionSectionView(title: "컵 선택")
-              .padding(.top, Metric.menuOptionSectionPadding)
-            SegmentedControl(
-              selectedIndex: $cupOptionIndex,
-              options: ["개인컵", "매장컵", "일회용컵"])
-            .padding(.bottom, Metric.contentBottomSpacing)
+            .padding(.top, Metric.contentTopSpacing)
+            .padding(.horizontal, Metric.contentHorizontalSpacing)
           }
-          .padding(.top, Metric.contentTopSpacing)
-          .padding(.horizontal, Metric.contentTopSpacing)
         }
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.top)
         
         VStack {
           HStack {
