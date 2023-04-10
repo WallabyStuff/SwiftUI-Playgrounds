@@ -20,6 +20,7 @@ struct MainView: View {
   enum Metric {
     static let commonHorizontalPadding = 20.f
     static let sectionSpacing = 20.f
+    static let bottomPadding = 100.f
     
     static let mainBannerSpacing = 16.f
     static let mainBannerCornerRadius = 20.f
@@ -33,7 +34,10 @@ struct MainView: View {
     static let locationInfoSpacing = 4.f
     
     static let logoImageSize = 32.f
+    
+    static let orderPreparingViewSpacing = 8.f
   }
+  
   
   // MARK: - Properties
   
@@ -96,7 +100,7 @@ struct MainView: View {
             }
             .padding(.horizontal, Metric.commonHorizontalPadding)
           }
-          
+          .padding(.bottom, Metric.bottomPadding)
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -122,6 +126,13 @@ struct MainView: View {
             }
           }
         }
+        
+        VStack {
+          Spacer()
+          
+          OrderPreparingView()
+        }
+        .padding(Metric.orderPreparingViewSpacing)
       }
     }
   }

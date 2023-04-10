@@ -50,6 +50,8 @@ struct MenuDetailView: View {
   @State var temperatureOption: Beverage.TemperatureOption = .iced
   @State var cupOptionIndex = 0
   @Environment(\.presentationMode) var presentationMode
+  @State var isMenuImageHidden = false
+  @State var string = ""
   
   
   // MARK: - Views
@@ -59,7 +61,11 @@ struct MenuDetailView: View {
       ZStack {
         ScrollView() {
           VStack {
-            StretchableImageHeader(image: Image(uiImage: menu.thumbnailImage!))
+            GeometryReader { proxy in
+              StretchableImageHeader(image: Image(uiImage: menu.thumbnailImage!))
+            }
+            .frame(height: UIScreen.main.bounds.width)
+            
             
             VStack(alignment: .leading, spacing: Metric.contentSpacing) {
               Text(menu.koreanName)
@@ -155,6 +161,7 @@ struct MenuDetailView: View {
     .navigationBarBackButtonHidden(true)
   }
 }
+
 
 // MARK: - Preview
 

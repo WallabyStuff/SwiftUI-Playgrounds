@@ -14,6 +14,7 @@ struct TemperatureOptionSegmentedControl: View {
   enum Metric {
     static let height = 44.f
     static let cornerRadius = 22.f
+    static let padding = 4.f
     
     static let itemSpacing = 0.f
     static let itemPadding = 4.f
@@ -28,30 +29,39 @@ struct TemperatureOptionSegmentedControl: View {
   // MARK: - Views
   
   var body: some View {
-    HStack(spacing: Metric.itemSpacing) {
-      ForEach(Beverage.TemperatureOption.allCases, id: \.self) { option in
-        ZStack {
-          Capsule()
-            .fill(selectedTemperatureOption == option ? Color(R.color.backgroundBase) : Color(R.color.backgroundSecondary))
-            .cornerRadius(Metric.cornerRadius)
-            .onTapGesture {
-              withAnimation(.easeInOut(duration: 0.2)) {
-                selectedTemperatureOption = option
-              }
+    ZStack {
+      GeometryReader { proxy in
+        let width = proxy.size.width / 2
+        let index = selectedTemperatureOption == .hot ? 0 : 1
+        
+        Capsule()
+          .fill(Color(R.color.backgroundBase))
+          .padding(Metric.padding)
+          .frame(width: width)
+          .offset(x: width * CGFloat(index))
+      }
+      
+      HStack(spacing: Metric.itemSpacing) {
+        ForEach(Beverage.TemperatureOption.allCases, id: \.self) { option in
+          Button {
+            withAnimation(.spring().speed(2)) {
+              selectedTemperatureOption = option
             }
-          
-          switch option {
-          case .iced:
-            Text(option.rawValue)
-              .font(.system(size: Metric.itemFontSize, weight: .medium))
-              .foregroundColor(selectedTemperatureOption == option ? Color(R.color.accentBlue) : Color(R.color.textSecondary))
-          case .hot:
-            Text(option.rawValue)
-              .font(.system(size: Metric.itemFontSize, weight: .medium))
-              .foregroundColor(selectedTemperatureOption == option ? Color(R.color.accentRed) : Color(R.color.textSecondary))
+          } label: {
+            switch option {
+              case .iced:
+                Text(option.rawValue)
+                  .font(.system(size: Metric.itemFontSize, weight: .medium))
+                  .foregroundColor(selectedTemperatureOption == option ? Color(R.color.accentBlue) : Color(R.color.textSecondary))
+                  .frame(maxWidth: .infinity, maxHeight: .infinity)
+              case .hot:
+                Text(option.rawValue)
+                  .font(.system(size: Metric.itemFontSize, weight: .medium))
+                  .foregroundColor(selectedTemperatureOption == option ? Color(R.color.accentRed) : Color(R.color.textSecondary))
+                  .frame(maxWidth: .infinity, maxHeight: .infinity)
+              }
           }
         }
-        .padding(Metric.itemPadding)
       }
     }
     .frame(height: Metric.height)

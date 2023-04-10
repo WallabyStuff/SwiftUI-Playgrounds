@@ -29,23 +29,31 @@ struct SegmentedControl: View {
   // MARK: - Views
   
   var body: some View {
-    HStack(spacing: Metric.itemSpacing) {
-      ForEach(options.indices, id: \.self) { index in
-        ZStack {
-          Capsule()
-            .fill(selectedIndex == index ? Color(R.color.backgroundBase) : Color(R.color.backgroundSecondary))
-            .cornerRadius(Metric.cornerRadius)
-            .onTapGesture {
-              withAnimation(.easeInOut(duration: 0.2)) {
-                selectedIndex = index
-              }
+    ZStack {
+      GeometryReader { proxy in
+        let width = proxy.size.width / CGFloat(options.count)
+        
+        Capsule()
+          .fill(Color(R.color.backgroundBase))
+          .padding(Metric.padding)
+          .frame(width: width)
+          .offset(x: width * CGFloat(selectedIndex))
+      }
+      
+      HStack(spacing: Metric.itemSpacing) {
+        ForEach(options.indices, id: \.self) { index in
+          Button {
+            withAnimation(.spring().speed(2)) {
+              selectedIndex = index
             }
-          
-          Text(options[index])
-            .font(.system(size: Metric.fontSize, weight: .medium))
-            .foregroundColor(selectedIndex == index ? Color(R.color.textBase) : Color(R.color.textSecondary))
+          } label: {
+            Text(options[index])
+              .font(.system(size: Metric.fontSize, weight: .medium))
+              .foregroundColor(selectedIndex == index ? Color(R.color.textBase) : Color(R.color.textSecondary))
+              .disabled(true)
+              .frame(maxWidth: .infinity, maxHeight: .infinity)
+          }
         }
-        .padding(Metric.padding)
       }
     }
     .frame(height: Metric.height)
