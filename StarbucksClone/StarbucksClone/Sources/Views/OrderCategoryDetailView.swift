@@ -22,7 +22,8 @@ struct OrderCategoryDetailView: View {
   
   // MARK: - Properties
   
-  var category: Beverage.Category
+  @ObservedObject var viewModel: OrderCategoryDetailViewModel
+  
   @Environment(\.presentationMode) var presentationMode
   
   
@@ -36,9 +37,10 @@ struct OrderCategoryDetailView: View {
         
         ScrollView {
           LazyVStack(spacing: Metric.cellSpacing) {
-            ForEach(category.beverages, id: \.id) { beverage in
+            ForEach(viewModel.category.beverages, id: \.id) { beverage in
               NavigationLink {
-                MenuDetailView(menu: beverage)
+                let viewModel = MenuDetailViewModel(beverage: beverage)
+                MenuDetailView(viewModel: viewModel)
               } label: {
                 BeverageMenuCell(beverage: beverage)
                   .listRowInsets(.init())
@@ -53,7 +55,7 @@ struct OrderCategoryDetailView: View {
           BottomLocationSelectorView()
         }
       }
-      .navigationTitle(category.categoryTitle)
+      .navigationTitle(viewModel.category.categoryTitle)
       .toolbar {
         ToolbarItem(placement: .navigationBarLeading) {
           Button {
@@ -93,6 +95,7 @@ struct OrderCategoryDetailView: View {
 
 struct OrderCategoryDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    OrderCategoryDetailView(category: Beverage.Category.coldBrew)
+    let viewModel = OrderCategoryDetailViewModel(category: .coldBrew)
+    OrderCategoryDetailView(viewModel: viewModel)
   }
 }

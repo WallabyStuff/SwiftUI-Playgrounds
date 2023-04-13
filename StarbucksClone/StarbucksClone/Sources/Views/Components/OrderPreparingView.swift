@@ -19,6 +19,7 @@ struct OrderPreparingView: View {
   enum Metric {
     static let padding = 12.f
     static let cornerRadius = 10.f
+    static let borderWidth = 1.f
     
     static let imageSize = 44.f
     
@@ -56,6 +57,7 @@ struct OrderPreparingView: View {
     }
     .padding(Metric.padding)
     .background(BlurView())
+    .border(Color(R.color.lineTertiary), width: Metric.borderWidth)
     .cornerRadius(Metric.cornerRadius)
   }
 }

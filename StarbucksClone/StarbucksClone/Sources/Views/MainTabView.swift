@@ -9,18 +9,24 @@ import SwiftUI
 
 struct MainTabView: View {
   
+  // MARK: - Properties
+  
+  private var mainViewModel = MainViewModel()
+  private var orderCategoryViewModel = OrderCategoryViewModel()
+  
+  
   // MARK: - Views
   
   var body: some View {
     NavigationView {
       TabView {
-        MainView()
+        MainView(viewModel: mainViewModel)
           .tabItem {
             Image(R.image.tabitemHome)
             Text("홈")
           }
         
-        OrderCategoryView()
+        OrderCategoryView(viewModel: orderCategoryViewModel)
           .tabItem {
             Image(R.image.tabitemOrder)
             Text("주문")

@@ -26,7 +26,7 @@ struct OrderCategoryView: View {
   
   // MARK: - Properties
   
-  var categories = Beverage.Category.allCases
+  @ObservedObject var viewModel: OrderCategoryViewModel
   
   
   // MARK: - Views
@@ -39,8 +39,9 @@ struct OrderCategoryView: View {
         
         ScrollView {
           LazyVStack(spacing: Metric.cellSpacing) {
-            ForEach(categories, id: \.self) { category in
-              NavigationLink(destination: OrderCategoryDetailView(category: category)) {
+            ForEach(viewModel.categories, id: \.self) { category in
+              let viewModel = OrderCategoryDetailViewModel(category: category)
+              NavigationLink(destination: OrderCategoryDetailView(viewModel: viewModel)) {
                 BeverageCategoryCell(category: category)
                   .listRowInsets(.init())
               }
@@ -76,6 +77,6 @@ struct OrderCategoryView: View {
 
 struct OrderCategoryView_Previews: PreviewProvider {
   static var previews: some View {
-    OrderCategoryView()
+    OrderCategoryView(viewModel: OrderCategoryViewModel())
   }
 }

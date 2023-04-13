@@ -14,21 +14,6 @@ struct Beverage {
     case refresher, coldBrew, blonde, espresso, decafCoffee, frappuccino, blended, physio, teavana, others
   }
   
-  enum AllergyFactor {
-    case milk, soybean, wheat, peanut, squid, egg
-  }
-  
-  enum TemperatureOptionType: String {
-    case hotOnly = "HOT ONLY"
-    case icedOnly = "ICDED ONLY"
-    case free = "FREE"
-  }
-  
-  enum TemperatureOption: String, CaseIterable {
-    case hot = "HOT"
-    case iced = "ICED"
-  }
-  
   let id: UUID = UUID()
   let name: String
   let koreanName: String
@@ -39,6 +24,9 @@ struct Beverage {
   let descriptionCaution: String?
   let allergyFactor: [AllergyFactor]
 }
+
+
+// MARK: - Size Option
 
 extension Beverage {
   
@@ -71,9 +59,57 @@ extension Beverage {
   }
 }
 
+
+// MARK: - Allergy Factor
+
 extension Beverage {
+  
+  enum AllergyFactor {
+    case milk, soybean, wheat, peanut, squid, egg
+  }
+  
   var allergyFactorDescription: String {
     return allergyFactor.map { $0.koreanName }.joined(separator: ", ")
+  }
+}
+
+
+// MARK: - Temperature Option
+
+extension Beverage {
+  
+  enum TemperatureOptionType: String {
+    case hotOnly = "HOT ONLY"
+    case icedOnly = "ICDED ONLY"
+    case free = "FREE"
+  }
+  
+  enum TemperatureOption: String, CaseIterable {
+    case hot = "HOT"
+    case iced = "ICED"
+  }
+}
+
+
+// MARK: - Cup Option
+
+extension Beverage {
+  
+  enum CupOption: Int, CaseIterable {
+    case personal
+    case reusable
+    case disposable
+    
+    var title: String {
+      switch self {
+      case .personal:
+        return "개인컵"
+      case .reusable:
+        return "매장컵"
+      case .disposable:
+        return "일회용컵"
+      }
+    }
   }
 }
 

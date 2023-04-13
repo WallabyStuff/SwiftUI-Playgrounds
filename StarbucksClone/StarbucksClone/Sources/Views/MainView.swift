@@ -12,8 +12,6 @@ struct MainView: View {
   // MARK: - Constants
   
   enum Constants {
-    static let userName = "이승기"
-    static let locationName = "스타벅스 프로그라피점"
     static let whatsNewSectionHeader = "What's New"
   }
   
@@ -41,9 +39,7 @@ struct MainView: View {
   
   // MARK: - Properties
   
-  var mainBanner = Banner.MainBanner.allCases
-  var recommendMenu = Beverage.recommend
-  var event = Event.whatsNew
+  @ObservedObject var viewModel: MainViewModel
 
   
   // MARK: - Views
@@ -57,7 +53,7 @@ struct MainView: View {
         ScrollView {
           ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: Metric.mainBannerSpacing) {
-              ForEach(mainBanner, id: \.id) { banner in
+              ForEach(viewModel.mainBanner, id: \.id) { banner in
                 GeometryReader { proxy in
                   Image(uiImage: banner.item.thumbnailImage!)
                     .resizable()
@@ -73,28 +69,29 @@ struct MainView: View {
             }
             .padding(Metric.mainBannerPadding)
           }
-          
-          RecommendMenuSectionHeader(name: Constants.userName)
+
+          RecommendMenuSectionHeader(name: viewModel.userName)
           ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: Metric.recommendMenuSpacing) {
-              ForEach(recommendMenu, id: \.id) {  menu in
+              ForEach(viewModel.recommendMenu, id: \.id) { beverage in
                 NavigationLink {
-                  MenuDetailView(menu: menu)
+                  let viewModel = MenuDetailViewModel(beverage: beverage)
+                  MenuDetailView(viewModel: viewModel)
                 } label: {
-                  RecommendMenuCell(beverage: menu)
+                  RecommendMenuCell(beverage: beverage)
                 }
               }
             }
             .padding(.horizontal, Metric.commonHorizontalPadding)
           }
-          
+
           Spacer()
             .frame(height: Metric.sectionSpacing)
-          
+
           LargeTitleSectionHeader(title: Constants.whatsNewSectionHeader)
           ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
-              ForEach(event, id: \.id) { event in
+              ForEach(viewModel.event, id: \.id) { event in
                 EventCell(event: event)
               }
             }
@@ -111,6 +108,7 @@ struct MainView: View {
               .scaledToFit()
               .frame(width: Metric.logoImageSize,
                      height: Metric.logoImageSize)
+              .unredacted()
           }
           
           ToolbarItem(placement: .principal) {
@@ -120,10 +118,11 @@ struct MainView: View {
                 .scaledToFit()
                 .frame(width: Metric.markerImageSize,
                        height: Metric.markerImageSize)
-              Text(Constants.locationName)
+              Text(viewModel.locationName)
                 .fontWeight(.semibold)
                 .foregroundColor(Color(R.color.textBase))
             }
+            .unredacted()
           }
         }
         
@@ -143,6 +142,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
   static var previews: some View {
-    MainView()
+    MainView(viewModel: MainViewModel())
   }
 }

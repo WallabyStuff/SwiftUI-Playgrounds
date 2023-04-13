@@ -11,6 +11,12 @@ struct MenuDetailView: View {
   
   // MARK: - Constants
   
+  enum Constants {
+    static let allergyFactorSectionHeaderTitle = "알러지 유발 요인"
+    static let sizeOptionSectionHeaderTitle = "사이즈 선택"
+    static let cupOptionSectionHeaderTitle = "컵 선택"
+  }
+  
   enum Metric {
     static let navigationViewHorizontalSpacing = 20.f
     static let navigationViewVerticalSpacing = 12.f
@@ -45,13 +51,9 @@ struct MenuDetailView: View {
   
   // MARK: - Properties
   
-  var menu: Beverage
-  @State var selectedSize: Beverage.SizeOption = .tall
-  @State var temperatureOption: Beverage.TemperatureOption = .iced
-  @State var cupOptionIndex = 0
+  @ObservedObject var viewModel: MenuDetailViewModel
+  
   @Environment(\.presentationMode) var presentationMode
-  @State var isMenuImageHidden = false
-  @State var string = ""
   
   
   // MARK: - Views
@@ -62,49 +64,49 @@ struct MenuDetailView: View {
         ScrollView() {
           VStack {
             GeometryReader { proxy in
-              StretchableImageHeader(image: Image(uiImage: menu.thumbnailImage!))
+              StretchableImageHeader(image: Image(uiImage: viewModel.beverage.thumbnailImage!))
             }
             .frame(height: UIScreen.main.bounds.width)
             
             
             VStack(alignment: .leading, spacing: Metric.contentSpacing) {
-              Text(menu.koreanName)
+              Text(viewModel.beverage.koreanName)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.system(size: Metric.menuNameFontSize, weight: .bold))
                 .foregroundColor(Color(R.color.textBase))
               
-              Text(menu.name)
+              Text(viewModel.beverage.name)
                 .multilineTextAlignment(.leading)
                 .font(.system(size: Metric.menuSubNameFontSize))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color(R.color.textSecondary))
                 .padding(.top, Metric.menuSubNamePadding)
               
-              Text(menu.description ?? "")
+              Text(viewModel.beverage.description ?? "")
                 .multilineTextAlignment(.leading)
                 .font(.system(size: Metric.descriptionFontSize))
                 .foregroundColor(Color(R.color.textBase))
                 .padding(.top, Metric.descriptionPadding)
               
               TemperatureOptionView(
-                selectedOption: $temperatureOption,
-                temperatureOptionType: menu.temperatureOptionType)
+                selectedOption: $viewModel.temperatureOption,
+                temperatureOptionType: viewModel.beverage.temperatureOptionType)
               .frame(maxWidth: .infinity)
               .padding(.top, Metric.temperatureOptionTopPadding)
               
-              DescriptionTextBox(text: menu.descriptionCaution ?? "")
+              DescriptionTextBox(text: viewModel.beverage.descriptionCaution ?? "")
                 .frame(maxWidth: .infinity)
                 .padding(.top, Metric.cautionBoxTopPadding)
               
-              if menu.allergyFactor.isEmpty == false {
+              if viewModel.beverage.allergyFactor.isEmpty == false {
                 VStack(alignment: .leading, spacing: 8) {
-                  Text("알러지 유발 요인")
+                  Text(Constants.allergyFactorSectionHeaderTitle)
                     .multilineTextAlignment(.leading)
                     .font(.system(size: Metric.allergyFactorFontSize, weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
                   
-                  Text(menu.allergyFactorDescription)
+                  Text(viewModel.beverage.allergyFactorDescription)
                     .font(.system(size: Metric.allergyFactorDescriptionFontSize, weight: .medium))
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -113,16 +115,14 @@ struct MenuDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
               }
               
-              MenuOptionSectionView(title: "사이즈 선택")
+              MenuOptionSectionView(title: Constants.sizeOptionSectionHeaderTitle)
                 .padding(.top, Metric.menuOptionSectionPadding)
-              SizeOptionSelectorView(selectedSizeOption: $selectedSize)
+              SizeOptionSelectorView(selectedSizeOption: $viewModel.selectedSize)
                 .frame(maxWidth: .infinity)
               
-              MenuOptionSectionView(title: "컵 선택")
+              MenuOptionSectionView(title: Constants.cupOptionSectionHeaderTitle)
                 .padding(.top, Metric.menuOptionSectionPadding)
-              SegmentedControl(
-                selectedIndex: $cupOptionIndex,
-                options: ["개인컵", "매장컵", "일회용컵"])
+              CupOptionSegmentedControl(selectedOption: $viewModel.cupOption)
               .padding(.bottom, Metric.contentBottomSpacing)
             }
             .padding(.top, Metric.contentTopSpacing)
@@ -154,7 +154,7 @@ struct MenuDetailView: View {
           
           Spacer()
           
-          MenuOrderToolBar(menu: menu)
+          MenuOrderToolBar(menu: viewModel.beverage)
         }
       }
     }
@@ -167,6 +167,7 @@ struct MenuDetailView: View {
 
 struct MenuDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    MenuDetailView(menu: .Category.decafCoffee.beverages.first!)
+    let viewModel = MenuDetailViewModel(beverage: Beverage.Category.coldBrew.beverages.first!)
+    MenuDetailView(viewModel: viewModel)
   }
 }

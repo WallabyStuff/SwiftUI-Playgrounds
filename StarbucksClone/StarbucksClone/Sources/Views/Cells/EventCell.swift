@@ -39,12 +39,12 @@ struct EventCell: View {
         VStack(alignment: .leading, spacing: Metric.textSpacing) {
           Text(event.eventPeriod)
             .multilineTextAlignment(.leading)
-            .font(.system(size: Metric.eventPeriodFontSize))
+            .font(.system(size: Metric.titleFontSize))
             .foregroundColor(Color(R.color.textSecondary))
           
           Text(event.title)
             .multilineTextAlignment(.leading)
-            .font(.system(size: Metric.titleFontSize, weight: .medium))
+            .font(.system(size: Metric.eventPeriodFontSize, weight: .medium))
             .foregroundColor(Color(R.color.textBase))
         }
         

@@ -1,5 +1,5 @@
 //
-//  LaunchScreen.swift
+//  SplashView.swift
 //  StarbucksClone
 //
 //  Created by 이승기 on 2023/04/06.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LaunchScreen: View {
+struct SplashView: View {
   
   // MARK: - Constants
   
@@ -20,9 +20,10 @@ struct LaunchScreen: View {
     static let logoWidth = 116.f
     static let logoHeight = 116.f
     static let logoBorderWidth = 4.f
+    static let imageBottomInset = 120.f
     
-    static let animationViewWidth = 100.f
-    static let animationViewHeight = 100.f
+    static let animationViewWidth = 88.f
+    static let animationViewHeight = 88.f
   }
   
   
@@ -41,20 +42,23 @@ struct LaunchScreen: View {
         Color.accentColor
           .ignoresSafeArea()
         
+        Image(R.image.logo)
+          .renderingMode(.original)
+          .resizable()
+          .scaledToFit()
+          .frame(
+            width: Metric.logoWidth,
+            height: Metric.logoHeight)
+          .overlay(
+            Circle()
+              .stroke(
+                Color(R.color.accentGreen),
+                lineWidth: Metric.logoBorderWidth)
+          )
+          .padding(.bottom, Metric.imageBottomInset)
+        
         VStack {
-          Image(R.image.logo)
-            .renderingMode(.original)
-            .resizable()
-            .scaledToFit()
-            .frame(
-              width: Metric.logoWidth,
-              height: Metric.logoHeight)
-            .overlay(
-              Circle()
-                .stroke(
-                  Color(R.color.accentGreen),
-                  lineWidth: Metric.logoBorderWidth)
-            )
+          Spacer()
           
           LottieView(name: Constant.animationName)
             .frame(
@@ -81,6 +85,6 @@ struct LaunchScreen: View {
 
 struct LaunchScreen_Previews: PreviewProvider {
   static var previews: some View {
-    LaunchScreen()
+    SplashView()
   }
 }
