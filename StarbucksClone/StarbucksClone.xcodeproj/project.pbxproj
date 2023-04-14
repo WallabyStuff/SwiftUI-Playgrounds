@@ -45,6 +45,12 @@
 		8E67F27129E75A62005A148D /* OrderCategoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F27029E75A62005A148D /* OrderCategoryDetailViewModel.swift */; };
 		8E67F27329E75B9B005A148D /* MenuDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F27229E75B9B005A148D /* MenuDetailViewModel.swift */; };
 		8E67F27529E763AA005A148D /* CupOptionSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F27429E763AA005A148D /* CupOptionSegmentedControl.swift */; };
+		8E67F29129E90E96005A148D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F29029E90E96005A148D /* SearchView.swift */; };
+		8E67F29529E9114E005A148D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F29429E9114E005A148D /* SearchTextField.swift */; };
+		8E67F29729E9148B005A148D /* SearchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F29629E9148B005A148D /* SearchHistoryCell.swift */; };
+		8E67F29929E917AA005A148D /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F29829E917AA005A148D /* SearchHistoryView.swift */; };
+		8E67F29F29E930AA005A148D /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F29E29E930AA005A148D /* SearchResultView.swift */; };
+		8E67F2A129E93342005A148D /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67F2A029E93342005A148D /* SearchResultViewModel.swift */; };
 		8E993EAD29E2EB1800D1A66F /* LiteralType+FloatConvention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E993EAC29E2EB1800D1A66F /* LiteralType+FloatConvention.swift */; };
 		8E993EB129E31F5700D1A66F /* StretchableImageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E993EB029E31F5700D1A66F /* StretchableImageHeader.swift */; };
 		8E993ECF29E4097B00D1A66F /* OrderPreparingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E993ECE29E4097B00D1A66F /* OrderPreparingView.swift */; };
@@ -94,6 +100,12 @@
 		8E67F27029E75A62005A148D /* OrderCategoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCategoryDetailViewModel.swift; sourceTree = "<group>"; };
 		8E67F27229E75B9B005A148D /* MenuDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewModel.swift; sourceTree = "<group>"; };
 		8E67F27429E763AA005A148D /* CupOptionSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupOptionSegmentedControl.swift; sourceTree = "<group>"; };
+		8E67F29029E90E96005A148D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		8E67F29429E9114E005A148D /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		8E67F29629E9148B005A148D /* SearchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCell.swift; sourceTree = "<group>"; };
+		8E67F29829E917AA005A148D /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
+		8E67F29E29E930AA005A148D /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		8E67F2A029E93342005A148D /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
 		8E993EAC29E2EB1800D1A66F /* LiteralType+FloatConvention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiteralType+FloatConvention.swift"; sourceTree = "<group>"; };
 		8E993EB029E31F5700D1A66F /* StretchableImageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchableImageHeader.swift; sourceTree = "<group>"; };
 		8E993ECE29E4097B00D1A66F /* OrderPreparingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPreparingView.swift; sourceTree = "<group>"; };
@@ -159,6 +171,8 @@
 				8E993EB029E31F5700D1A66F /* StretchableImageHeader.swift */,
 				8E993ECE29E4097B00D1A66F /* OrderPreparingView.swift */,
 				8E993ED029E40F9E00D1A66F /* BlurView.swift */,
+				8E67F29429E9114E005A148D /* SearchTextField.swift */,
+				8E67F29629E9148B005A148D /* SearchHistoryCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -243,6 +257,10 @@
 				8E67F27029E75A62005A148D /* OrderCategoryDetailViewModel.swift */,
 				8E529D5929DFEF720059BE4F /* MenuDetailView.swift */,
 				8E67F27229E75B9B005A148D /* MenuDetailViewModel.swift */,
+				8E67F29029E90E96005A148D /* SearchView.swift */,
+				8E67F29829E917AA005A148D /* SearchHistoryView.swift */,
+				8E67F29E29E930AA005A148D /* SearchResultView.swift */,
+				8E67F2A029E93342005A148D /* SearchResultViewModel.swift */,
 				8E4CA0E629E1B55F001A6BDC /* Components */,
 				8E993EAF29E2F4AA00D1A66F /* Section */,
 				8E529D4829DDF4F40059BE4F /* Cells */,
@@ -433,7 +451,10 @@
 				8E529D5829DEE43E0059BE4F /* EventCell.swift in Sources */,
 				8E529D5029DE72500059BE4F /* BeverageMenuCell.swift in Sources */,
 				8E993ECF29E4097B00D1A66F /* OrderPreparingView.swift in Sources */,
+				8E67F29929E917AA005A148D /* SearchHistoryView.swift in Sources */,
 				8E529D4E29DE72350059BE4F /* OrderCategoryDetailView.swift in Sources */,
+				8E67F29129E90E96005A148D /* SearchView.swift in Sources */,
+				8E67F29529E9114E005A148D /* SearchTextField.swift in Sources */,
 				8E529D6A29E0193F0059BE4F /* SizeOptionItem.swift in Sources */,
 				8E4CA0F029E2B9D2001A6BDC /* MenuOrderToolBar.swift in Sources */,
 				8E67F27129E75A62005A148D /* OrderCategoryDetailViewModel.swift in Sources */,
@@ -447,6 +468,7 @@
 				8EC8F61E29E02A61003F032E /* MenuOptionSectionView.swift in Sources */,
 				8E529D5429DEDA080059BE4F /* RecommendMenuCell.swift in Sources */,
 				8E529D4729DDF3F50059BE4F /* OrderCategoryView.swift in Sources */,
+				8E67F29729E9148B005A148D /* SearchHistoryCell.swift in Sources */,
 				8E4CA0F229E2BAAB001A6BDC /* QuantityCounterView.swift in Sources */,
 				8E529D5A29DFEF720059BE4F /* MenuDetailView.swift in Sources */,
 				8E993ED129E40F9E00D1A66F /* BlurView.swift in Sources */,
@@ -454,6 +476,8 @@
 				8EC8F61C29E0262C003F032E /* SizeOptionSelectorView.swift in Sources */,
 				8E529D5229DED6510059BE4F /* RecommendMenuSectionHeader.swift in Sources */,
 				8E529CDE29DD234A0059BE4F /* StarbucksCloneApp.swift in Sources */,
+				8E67F29F29E930AA005A148D /* SearchResultView.swift in Sources */,
+				8E67F2A129E93342005A148D /* SearchResultViewModel.swift in Sources */,
 				8E529D6229DFFB310059BE4F /* CapsuleView.swift in Sources */,
 				8E529D6029DFF7BE0059BE4F /* TemperatureOptionView.swift in Sources */,
 				8E4CA0E229E0769F001A6BDC /* SegmentedControl.swift in Sources */,

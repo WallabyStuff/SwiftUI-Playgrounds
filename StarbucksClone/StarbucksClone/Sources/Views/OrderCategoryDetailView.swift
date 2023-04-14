@@ -23,8 +23,8 @@ struct OrderCategoryDetailView: View {
   // MARK: - Properties
   
   @ObservedObject var viewModel: OrderCategoryDetailViewModel
-  
   @Environment(\.presentationMode) var presentationMode
+  @State private var isSearchViewPresented = false
   
   
   // MARK: - Views
@@ -73,7 +73,7 @@ struct OrderCategoryDetailView: View {
         
         ToolbarItem(placement: .navigationBarTrailing) {
           Button {
-            // search action here
+            isSearchViewPresented = true
           } label: {
             Image(R.image.magnifyingGlass)
               .resizable()
@@ -87,6 +87,7 @@ struct OrderCategoryDetailView: View {
       }
     }
     .navigationBarBackButtonHidden(true)
+    .fullScreenCover(isPresented: $isSearchViewPresented, content: SearchView.init)
   }
 }
 

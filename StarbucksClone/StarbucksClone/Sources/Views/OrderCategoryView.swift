@@ -27,6 +27,7 @@ struct OrderCategoryView: View {
   // MARK: - Properties
   
   @ObservedObject var viewModel: OrderCategoryViewModel
+  @State private var isSearchResultPresented = false
   
   
   // MARK: - Views
@@ -52,13 +53,17 @@ struct OrderCategoryView: View {
         .navigationTitle(Constants.navigationTitle)
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
-            Image(R.image.magnifyingGlass)
-              .resizable()
-              .scaledToFit()
-              .padding(Metric.toolbarButtonPadding)
-              .frame(width: Metric.toolbarButtonSize,
-                     height: Metric.toolbarButtonSize)
-              .foregroundColor(Color(R.color.textBase))
+            Button {
+              isSearchResultPresented = true
+            } label: {
+              Image(R.image.magnifyingGlass)
+                .resizable()
+                .scaledToFit()
+                .padding(Metric.toolbarButtonPadding)
+                .frame(width: Metric.toolbarButtonSize,
+                       height: Metric.toolbarButtonSize)
+                .foregroundColor(Color(R.color.textBase))
+            }
           }
         }
         
@@ -69,6 +74,7 @@ struct OrderCategoryView: View {
       }
     }
     .navigationBarBackButtonHidden(true)
+    .fullScreenCover(isPresented: $isSearchResultPresented, content: SearchView.init)
   }
 }
 
