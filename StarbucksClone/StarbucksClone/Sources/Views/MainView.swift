@@ -40,6 +40,7 @@ struct MainView: View {
   // MARK: - Properties
   
   @ObservedObject var viewModel: MainViewModel
+  @State var isMenuDetailPresented = false
 
   
   // MARK: - Views
@@ -74,11 +75,16 @@ struct MainView: View {
           ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: Metric.recommendMenuSpacing) {
               ForEach(viewModel.recommendMenu, id: \.id) { beverage in
-                NavigationLink {
-                  let viewModel = MenuDetailViewModel(beverage: beverage)
-                  MenuDetailView(viewModel: viewModel)
+                Button {
+                  isMenuDetailPresented.toggle()
                 } label: {
+                  let viewModel = MenuDetailViewModel(beverage: beverage)
+                  
                   RecommendMenuCell(beverage: beverage)
+                    .fullScreenCover(isPresented: $isMenuDetailPresented,
+                                     content: {
+                      MenuDetailView(viewModel: viewModel)
+                    })
                 }
               }
             }

@@ -97,7 +97,7 @@ struct MenuOrderToolBar: View {
       }
       .padding(.horizontal, Metric.horizontalPadding)
       .padding(.vertical, Metric.verticalPadding)
-      .background(Color(R.color.accentGreen))
+      .background(Color(R.color.accentGreen).ignoresSafeArea())
     }
   }
 }

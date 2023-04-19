@@ -25,6 +25,7 @@ struct OrderCategoryDetailView: View {
   @ObservedObject var viewModel: OrderCategoryDetailViewModel
   @Environment(\.presentationMode) var presentationMode
   @State private var isSearchViewPresented = false
+  @State private var isMenuDetailPresented = false
   
   
   // MARK: - Views
@@ -38,12 +39,17 @@ struct OrderCategoryDetailView: View {
         ScrollView {
           LazyVStack(spacing: Metric.cellSpacing) {
             ForEach(viewModel.category.beverages, id: \.id) { beverage in
-              NavigationLink {
-                let viewModel = MenuDetailViewModel(beverage: beverage)
-                MenuDetailView(viewModel: viewModel)
+              Button {
+                isMenuDetailPresented.toggle()
               } label: {
+                let viewModel = MenuDetailViewModel(beverage: beverage)
+                
                 BeverageMenuCell(beverage: beverage)
                   .listRowInsets(.init())
+                  .fullScreenCover(isPresented: $isMenuDetailPresented,
+                                   content: {
+                    MenuDetailView(viewModel: viewModel)
+                  })
               }
             }
           }

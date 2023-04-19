@@ -328,6 +328,8 @@
 			dependencies = (
 			);
 			name = StarbucksClone;
+			packageProductDependencies = (
+			);
 			productName = StarbucksClone;
 			productReference = 8E529CDA29DD234A0059BE4F /* StarbucksClone.app */;
 			productType = "com.apple.product-type.application";
@@ -356,6 +358,8 @@
 				Base,
 			);
 			mainGroup = 8E529CD129DD234A0059BE4F;
+			packageReferences = (
+			);
 			productRefGroup = 8E529CDB29DD234A0059BE4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
