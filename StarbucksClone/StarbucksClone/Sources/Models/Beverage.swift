@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Beverage {
+struct Beverage: Identifiable {
   
   enum Category: CaseIterable, Identifiable {
     var id: UUID { return UUID() }

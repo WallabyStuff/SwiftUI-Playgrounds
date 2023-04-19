@@ -25,7 +25,7 @@ struct OrderCategoryDetailView: View {
   @ObservedObject var viewModel: OrderCategoryDetailViewModel
   @Environment(\.presentationMode) var presentationMode
   @State private var isSearchViewPresented = false
-  @State private var isMenuDetailPresented = false
+  @State private var selectedMenu: Beverage?
   
   
   // MARK: - Views
@@ -40,14 +40,12 @@ struct OrderCategoryDetailView: View {
           LazyVStack(spacing: Metric.cellSpacing) {
             ForEach(viewModel.category.beverages, id: \.id) { beverage in
               Button {
-                isMenuDetailPresented.toggle()
+                selectedMenu = beverage
               } label: {
-                let viewModel = MenuDetailViewModel(beverage: beverage)
-                
                 BeverageMenuCell(beverage: beverage)
                   .listRowInsets(.init())
-                  .fullScreenCover(isPresented: $isMenuDetailPresented,
-                                   content: {
+                  .fullScreenCover(item: $selectedMenu, content: { beverage in
+                    let viewModel = MenuDetailViewModel(beverage: beverage)
                     MenuDetailView(viewModel: viewModel)
                   })
               }

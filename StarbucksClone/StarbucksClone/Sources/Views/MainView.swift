@@ -40,7 +40,7 @@ struct MainView: View {
   // MARK: - Properties
   
   @ObservedObject var viewModel: MainViewModel
-  @State var isMenuDetailPresented = false
+  @State var selectedMenu: Beverage?
 
   
   // MARK: - Views
@@ -76,13 +76,11 @@ struct MainView: View {
             LazyHStack(spacing: Metric.recommendMenuSpacing) {
               ForEach(viewModel.recommendMenu, id: \.id) { beverage in
                 Button {
-                  isMenuDetailPresented.toggle()
+                  selectedMenu = beverage
                 } label: {
-                  let viewModel = MenuDetailViewModel(beverage: beverage)
-                  
                   RecommendMenuCell(beverage: beverage)
-                    .fullScreenCover(isPresented: $isMenuDetailPresented,
-                                     content: {
+                    .fullScreenCover(item: $selectedMenu, content: { beverage in
+                      let viewModel = MenuDetailViewModel(beverage: beverage)
                       MenuDetailView(viewModel: viewModel)
                     })
                 }
