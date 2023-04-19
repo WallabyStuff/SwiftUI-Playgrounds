@@ -21,9 +21,12 @@ struct MenuDetailView: View {
     static let navigationViewHorizontalSpacing = 20.f
     static let navigationViewVerticalSpacing = 12.f
     
-    static let backButtonBackgroundOpacity = 0.1.f
+    static let backButtonBackgroundLightOpacity = 0.1.f
+    static let backButtonBackgroundDarkOpacity = 0.5.f
     static let backButtonSize = 36.f
     static let backButtonPadding = 8.f
+    
+    static let backButtonChangeAppearanceThreshold = 100.f
     
     static let contentSpacing = 0.f
     static let contentHorizontalSpacing = 20.f
@@ -52,8 +55,8 @@ struct MenuDetailView: View {
   // MARK: - Properties
   
   @ObservedObject var viewModel: MenuDetailViewModel
-  
   @Environment(\.presentationMode) var presentationMode
+  @State var backButtonBackgroundColor = Color(R.color.backgroundBase).opacity(Metric.backButtonBackgroundLightOpacity)
   
   
   // MARK: - Views
@@ -61,13 +64,12 @@ struct MenuDetailView: View {
   var body: some View {
     NavigationView {
       ZStack {
-        ScrollView() {
+        ScrollViewOffset {
           VStack {
             GeometryReader { proxy in
               StretchableImageHeader(image: Image(uiImage: viewModel.beverage.thumbnailImage!))
             }
             .frame(height: UIScreen.main.bounds.width)
-            
             
             VStack(alignment: .leading, spacing: Metric.contentSpacing) {
               Text(viewModel.beverage.koreanName)
@@ -128,6 +130,14 @@ struct MenuDetailView: View {
             .padding(.top, Metric.contentTopSpacing)
             .padding(.horizontal, Metric.contentHorizontalSpacing)
           }
+        } onOffsetChange: { offset in
+          withAnimation {
+            if offset >= -(UIScreen.main.bounds.width - Metric.backButtonChangeAppearanceThreshold) {
+              backButtonBackgroundColor = Color(R.color.backgroundBase).opacity(Metric.backButtonBackgroundLightOpacity)
+            } else {
+              backButtonBackgroundColor = Color(R.color.accentBlack).opacity(Metric.backButtonBackgroundDarkOpacity)
+            }
+          }
         }
         .edgesIgnoringSafeArea(.top)
         
@@ -144,7 +154,7 @@ struct MenuDetailView: View {
                        height: Metric.backButtonSize)
                 .foregroundColor(Color(R.color.iconWhite))
             }
-            .background(Color(R.color.backgroundBase).opacity(Metric.backButtonBackgroundOpacity))
+            .background(backButtonBackgroundColor)
             .clipShape(Circle())
             
             Spacer()

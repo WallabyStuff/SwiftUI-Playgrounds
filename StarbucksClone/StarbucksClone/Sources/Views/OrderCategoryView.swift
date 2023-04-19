@@ -38,7 +38,7 @@ struct OrderCategoryView: View {
         Color(R.color.backgroundBase)
           .ignoresSafeArea()
         
-        ScrollView {
+        ScrollView() {
           LazyVStack(spacing: Metric.cellSpacing) {
             ForEach(viewModel.categories, id: \.self) { category in
               let viewModel = OrderCategoryDetailViewModel(category: category)

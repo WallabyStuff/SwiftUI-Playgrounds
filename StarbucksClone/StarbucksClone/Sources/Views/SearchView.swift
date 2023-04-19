@@ -34,7 +34,8 @@ struct SearchView: View {
           }
           .padding(.horizontal, 12)
         }
-        .padding(.horizontal, 20)
+        .padding(.leading, 20)
+        .padding(.trailing, 12)
         .frame(maxWidth: .infinity, minHeight: 60)
         .background(Color(R.color.backgroundBase))
         
