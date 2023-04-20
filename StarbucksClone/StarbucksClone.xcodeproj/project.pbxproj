@@ -146,6 +146,45 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8E1312C429F1782900FBD0BA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */,
+				8E529CDF29DD234A0059BE4F /* MainTabView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		8E1312C529F178AB00FBD0BA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8E529D3129DDCE5B0059BE4F /* SplashView.swift */,
+				8E529D4429DDDEE60059BE4F /* MainView.swift */,
+				8E67F26C29E739F4005A148D /* MainViewModel.swift */,
+				8E529D4629DDF3F50059BE4F /* OrderCategoryView.swift */,
+				8E67F26E29E758FE005A148D /* OrderCategoryViewModel.swift */,
+				8E529D4D29DE72350059BE4F /* OrderCategoryDetailView.swift */,
+				8E67F27029E75A62005A148D /* OrderCategoryDetailViewModel.swift */,
+				8E529D5929DFEF720059BE4F /* MenuDetailView.swift */,
+				8E67F27229E75B9B005A148D /* MenuDetailViewModel.swift */,
+				8E67F29029E90E96005A148D /* SearchView.swift */,
+				8E67F29829E917AA005A148D /* SearchHistoryView.swift */,
+				8E67F29E29E930AA005A148D /* SearchResultView.swift */,
+				8E67F2A029E93342005A148D /* SearchResultViewModel.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		8E1312C629F179F300FBD0BA /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */,
+				8E529D6529E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift */,
+				8E67F27429E763AA005A148D /* CupOptionSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
 		8E4CA0E329E097C9001A6BDC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,22 +199,20 @@
 			isa = PBXGroup;
 			children = (
 				8E529D6129DFFB310059BE4F /* CapsuleView.swift */,
-				8E529D6529E0098D0059BE4F /* TemperatureOptionSegmentedControl.swift */,
 				8E529D6729E00BC10059BE4F /* DescriptionTextBox.swift */,
-				8E993EAE29E2F3E600D1A66F /* SizeOptionSelectorView */,
-				8E67F27429E763AA005A148D /* CupOptionSegmentedControl.swift */,
-				8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */,
 				8E529D4B29DDF96C0059BE4F /* BottomLocationSelectorView.swift */,
 				8E529D5F29DFF7BE0059BE4F /* TemperatureOptionView.swift */,
 				8E4CA0EB29E1B8F0001A6BDC /* LottieView.swift */,
 				8E4CA0EF29E2B9D2001A6BDC /* MenuOrderToolBar.swift */,
 				8E4CA0F129E2BAAB001A6BDC /* QuantityCounterView.swift */,
-				8E993EB029E31F5700D1A66F /* StretchableImageHeader.swift */,
 				8E993ECE29E4097B00D1A66F /* OrderPreparingView.swift */,
 				8E993ED029E40F9E00D1A66F /* BlurView.swift */,
 				8E67F29429E9114E005A148D /* SearchTextField.swift */,
-				8E67F29629E9148B005A148D /* SearchHistoryCell.swift */,
 				8E91288A29EFB841003650EC /* ScrollViewOffset.swift */,
+				8E1312C629F179F300FBD0BA /* SegmentedControl */,
+				8E993EAF29E2F4AA00D1A66F /* Section */,
+				8E529D4829DDF4F40059BE4F /* Cells */,
+				8E993EAE29E2F3E600D1A66F /* SizeOptionSelector */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -193,7 +230,6 @@
 		8E4CA0EA29E1B798001A6BDC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8E529CDD29DD234A0059BE4F /* StarbucksCloneApp.swift */,
 				8E529CEB29DD23590059BE4F /* Models */,
 				8E529D3029DDCE520059BE4F /* Views */,
 				8E4CA0E329E097C9001A6BDC /* Utils */,
@@ -250,23 +286,9 @@
 		8E529D3029DDCE520059BE4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8E529D3129DDCE5B0059BE4F /* SplashView.swift */,
-				8E529CDF29DD234A0059BE4F /* MainTabView.swift */,
-				8E529D4429DDDEE60059BE4F /* MainView.swift */,
-				8E67F26C29E739F4005A148D /* MainViewModel.swift */,
-				8E529D4629DDF3F50059BE4F /* OrderCategoryView.swift */,
-				8E67F26E29E758FE005A148D /* OrderCategoryViewModel.swift */,
-				8E529D4D29DE72350059BE4F /* OrderCategoryDetailView.swift */,
-				8E67F27029E75A62005A148D /* OrderCategoryDetailViewModel.swift */,
-				8E529D5929DFEF720059BE4F /* MenuDetailView.swift */,
-				8E67F27229E75B9B005A148D /* MenuDetailViewModel.swift */,
-				8E67F29029E90E96005A148D /* SearchView.swift */,
-				8E67F29829E917AA005A148D /* SearchHistoryView.swift */,
-				8E67F29E29E930AA005A148D /* SearchResultView.swift */,
-				8E67F2A029E93342005A148D /* SearchResultViewModel.swift */,
+				8E1312C429F1782900FBD0BA /* Navigation */,
+				8E1312C529F178AB00FBD0BA /* Screen */,
 				8E4CA0E629E1B55F001A6BDC /* Components */,
-				8E993EAF29E2F4AA00D1A66F /* Section */,
-				8E529D4829DDF4F40059BE4F /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,17 +309,18 @@
 				8E529D5329DEDA080059BE4F /* RecommendMenuCell.swift */,
 				8E529D5529DEE2800059BE4F /* LargeTitleSectionHeader.swift */,
 				8E529D5729DEE43E0059BE4F /* EventCell.swift */,
+				8E67F29629E9148B005A148D /* SearchHistoryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		8E993EAE29E2F3E600D1A66F /* SizeOptionSelectorView */ = {
+		8E993EAE29E2F3E600D1A66F /* SizeOptionSelector */ = {
 			isa = PBXGroup;
 			children = (
 				8EC8F61B29E0262C003F032E /* SizeOptionSelectorView.swift */,
 				8E529D6929E0193F0059BE4F /* SizeOptionItem.swift */,
 			);
-			path = SizeOptionSelectorView;
+			path = SizeOptionSelector;
 			sourceTree = "<group>";
 		};
 		8E993EAF29E2F4AA00D1A66F /* Section */ = {
@@ -305,6 +328,7 @@
 			children = (
 				8EC8F61D29E02A61003F032E /* MenuOptionSectionView.swift */,
 				8E529D5129DED6510059BE4F /* RecommendMenuSectionHeader.swift */,
+				8E993EB029E31F5700D1A66F /* StretchableImageHeader.swift */,
 			);
 			path = Section;
 			sourceTree = "<group>";
