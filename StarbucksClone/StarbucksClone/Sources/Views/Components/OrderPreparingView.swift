@@ -67,9 +67,7 @@ struct OrderPreparingView: View {
 
 struct OrderPreparingView_Previews: PreviewProvider {
   static var previews: some View {
-    VStack {
-      Spacer()
-      OrderPreparingView()
-    }
+    OrderPreparingView()
+      .previewLayout(.sizeThatFits)
   }
 }

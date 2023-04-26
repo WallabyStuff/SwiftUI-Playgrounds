@@ -43,11 +43,9 @@ struct CapsuleView: View {
 
 struct CapsuleView_Previews: PreviewProvider {
   static var previews: some View {
-    ZStack {
-      Color.black
-        .ignoresSafeArea()
-      
-      CapsuleView(title: "ICED ONLY", color: Color(R.color.accentBlue))
-    }
+    CapsuleView(title: "ICED ONLY", color: Color(R.color.accentBlue))
+      .padding()
+      .background(Color.black)
+      .previewLayout(.sizeThatFits)
   }
 }

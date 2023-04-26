@@ -20,12 +20,6 @@ struct MainView: View {
     static let sectionSpacing = 20.f
     static let bottomPadding = 100.f
     
-    static let mainBannerSpacing = 16.f
-    static let mainBannerCornerRadius = 20.f
-    static let mainBannerWidth = 335.f
-    static let mainBannerHeight = 252.f
-    static let mainBannerPadding = 20.f
-    
     static let recommendMenuSpacing = 20.f
     
     static let markerImageSize = 16.f
@@ -41,6 +35,7 @@ struct MainView: View {
   
   @ObservedObject var viewModel: MainViewModel
   @State var selectedMenu: Beverage?
+  @State var index = 0
 
   
   // MARK: - Views
@@ -52,24 +47,7 @@ struct MainView: View {
           .ignoresSafeArea()
         
         ScrollView {
-          ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: Metric.mainBannerSpacing) {
-              ForEach(viewModel.mainBanner, id: \.id) { banner in
-                GeometryReader { proxy in
-                  Image(uiImage: banner.item.thumbnailImage!)
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(Metric.mainBannerCornerRadius)
-                    .rotation3DEffect(
-                      Angle(degrees: Double((proxy.frame(in: .global).minX - 20) / -40)),
-                      axis: (x: 10, y: 10.0, z: 0))
-                }
-                .frame(width: Metric.mainBannerWidth,
-                       height: Metric.mainBannerHeight)
-              }
-            }
-            .padding(Metric.mainBannerPadding)
-          }
+          MainBannerCarousel(banners: viewModel.mainBanner)
 
           RecommendMenuSectionHeader(name: viewModel.userName)
           ScrollView(.horizontal, showsIndicators: false) {

@@ -51,9 +51,6 @@ struct TemperatureOptionView: View {
 struct TemperatureOptionView_Previews: PreviewProvider {
   static var previews: some View {
     ZStack {
-      Color.black
-        .ignoresSafeArea()
-      
       VStack {
         TemperatureOptionView(
           selectedOption: .constant(.hot),
@@ -72,5 +69,8 @@ struct TemperatureOptionView_Previews: PreviewProvider {
           temperatureOptionType: .hotOnly)
       }
     }
+    .padding()
+    .background(Color.black)
+    .previewLayout(.sizeThatFits)
   }
 }

@@ -45,5 +45,6 @@ struct DescriptionTextBox: View {
 struct DescriptionTextBox_Previews: PreviewProvider {
   static var previews: some View {
     DescriptionTextBox(text: "Sample description")
+      .previewLayout(.sizeThatFits)
   }
 }

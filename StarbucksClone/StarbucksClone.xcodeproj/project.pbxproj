@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		619A5C479FF5627104F5F4F7 /* Pods_StarbucksClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D82DAADD67FD7B4D1411408 /* Pods_StarbucksClone.framework */; };
 		8E4CA0E229E0769F001A6BDC /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */; };
 		8E4CA0E529E097DB001A6BDC /* Int+PriceExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */; };
 		8E4CA0E929E1B792001A6BDC /* bean_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E829E1B792001A6BDC /* bean_loading.json */; };
@@ -58,11 +57,13 @@
 		8E993ED129E40F9E00D1A66F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E993ED029E40F9E00D1A66F /* BlurView.swift */; };
 		8EC8F61C29E0262C003F032E /* SizeOptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8F61B29E0262C003F032E /* SizeOptionSelectorView.swift */; };
 		8EC8F61E29E02A61003F032E /* MenuOptionSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8F61D29E02A61003F032E /* MenuOptionSectionView.swift */; };
+		8ED2C3A529F2BBD000C6617A /* PagingBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2C3A429F2BBD000C6617A /* PagingBannerView.swift */; };
+		8ED2C3AB29F2DB3700C6617A /* MainBannerCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2C3AA29F2DB3700C6617A /* MainBannerCarousel.swift */; };
+		A74A99B157A41590F130DE5F /* Pods_StarbucksClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0217C2B0F6150BCBC78C029 /* Pods_StarbucksClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		27C6B1E2F3CD4383E589BACC /* Pods-StarbucksClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.release.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.release.xcconfig"; sourceTree = "<group>"; };
-		4AA90B74C626B64ADD1AEDF1 /* Pods-StarbucksClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.debug.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.debug.xcconfig"; sourceTree = "<group>"; };
+		1C81B9AB4BD1379EBFD55AA5 /* Pods-StarbucksClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.release.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.release.xcconfig"; sourceTree = "<group>"; };
 		8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+PriceExpression.swift"; sourceTree = "<group>"; };
 		8E4CA0E829E1B792001A6BDC /* bean_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bean_loading.json; sourceTree = "<group>"; };
@@ -114,7 +115,10 @@
 		8E993ED029E40F9E00D1A66F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		8EC8F61B29E0262C003F032E /* SizeOptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeOptionSelectorView.swift; sourceTree = "<group>"; };
 		8EC8F61D29E02A61003F032E /* MenuOptionSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionSectionView.swift; sourceTree = "<group>"; };
-		9D82DAADD67FD7B4D1411408 /* Pods_StarbucksClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarbucksClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED2C3A429F2BBD000C6617A /* PagingBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingBannerView.swift; sourceTree = "<group>"; };
+		8ED2C3AA29F2DB3700C6617A /* MainBannerCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerCarousel.swift; sourceTree = "<group>"; };
+		A013486561F83DEAC3CC67B2 /* Pods-StarbucksClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.debug.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.debug.xcconfig"; sourceTree = "<group>"; };
+		B0217C2B0F6150BCBC78C029 /* Pods_StarbucksClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarbucksClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,17 +126,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				619A5C479FF5627104F5F4F7 /* Pods_StarbucksClone.framework in Frameworks */,
+				A74A99B157A41590F130DE5F /* Pods_StarbucksClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		485FBDE889662DA65C75045F /* Frameworks */ = {
+		2FF7A5CD644FE9A5B11356C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D82DAADD67FD7B4D1411408 /* Pods_StarbucksClone.framework */,
+				B0217C2B0F6150BCBC78C029 /* Pods_StarbucksClone.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,8 +144,8 @@
 		73B892EF28CDC6EECEA5A72F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4AA90B74C626B64ADD1AEDF1 /* Pods-StarbucksClone.debug.xcconfig */,
-				27C6B1E2F3CD4383E589BACC /* Pods-StarbucksClone.release.xcconfig */,
+				A013486561F83DEAC3CC67B2 /* Pods-StarbucksClone.debug.xcconfig */,
+				1C81B9AB4BD1379EBFD55AA5 /* Pods-StarbucksClone.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -209,6 +213,8 @@
 				8E993ED029E40F9E00D1A66F /* BlurView.swift */,
 				8E67F29429E9114E005A148D /* SearchTextField.swift */,
 				8E91288A29EFB841003650EC /* ScrollViewOffset.swift */,
+				8ED2C3A429F2BBD000C6617A /* PagingBannerView.swift */,
+				8ED2C3AA29F2DB3700C6617A /* MainBannerCarousel.swift */,
 				8E1312C629F179F300FBD0BA /* SegmentedControl */,
 				8E993EAF29E2F4AA00D1A66F /* Section */,
 				8E529D4829DDF4F40059BE4F /* Cells */,
@@ -244,7 +250,7 @@
 				8E529CDC29DD234A0059BE4F /* StarbucksClone */,
 				8E529CDB29DD234A0059BE4F /* Products */,
 				73B892EF28CDC6EECEA5A72F /* Pods */,
-				485FBDE889662DA65C75045F /* Frameworks */,
+				2FF7A5CD644FE9A5B11356C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,20 +346,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E529CE829DD234C0059BE4F /* Build configuration list for PBXNativeTarget "StarbucksClone" */;
 			buildPhases = (
-				E89429D52ECED3D4736AF95D /* [CP] Check Pods Manifest.lock */,
+				5D12CDEADE888FEEC8360544 /* [CP] Check Pods Manifest.lock */,
 				8E529D4029DDD95B0059BE4F /* R.swift */,
 				8E529CD629DD234A0059BE4F /* Sources */,
 				8E529CD729DD234A0059BE4F /* Frameworks */,
 				8E529CD829DD234A0059BE4F /* Resources */,
-				8D2769796865B67EDA38B2AA /* [CP] Embed Pods Frameworks */,
+				4B8CBD09CD93AF0E7F2F6E06 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = StarbucksClone;
-			packageProductDependencies = (
-			);
 			productName = StarbucksClone;
 			productReference = 8E529CDA29DD234A0059BE4F /* StarbucksClone.app */;
 			productType = "com.apple.product-type.application";
@@ -382,8 +386,6 @@
 				Base,
 			);
 			mainGroup = 8E529CD129DD234A0059BE4F;
-			packageReferences = (
-			);
 			productRefGroup = 8E529CDB29DD234A0059BE4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -407,7 +409,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8D2769796865B67EDA38B2AA /* [CP] Embed Pods Frameworks */ = {
+		4B8CBD09CD93AF0E7F2F6E06 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,27 +426,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E529D4029DDD95B0059BE4F /* R.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = R.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		E89429D52ECED3D4736AF95D /* [CP] Check Pods Manifest.lock */ = {
+		5D12CDEADE888FEEC8360544 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,6 +448,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8E529D4029DDD95B0059BE4F /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -478,6 +480,7 @@
 				8E91288B29EFB841003650EC /* ScrollViewOffset.swift in Sources */,
 				8E529D4529DDDEE60059BE4F /* MainView.swift in Sources */,
 				8E529D5629DEE2800059BE4F /* LargeTitleSectionHeader.swift in Sources */,
+				8ED2C3AB29F2DB3700C6617A /* MainBannerCarousel.swift in Sources */,
 				8E993EB129E31F5700D1A66F /* StretchableImageHeader.swift in Sources */,
 				8E529D4329DDD9E50059BE4F /* R.generated.swift in Sources */,
 				8E529D5829DEE43E0059BE4F /* EventCell.swift in Sources */,
@@ -497,6 +500,7 @@
 				8E4CA0EC29E1B8F0001A6BDC /* LottieView.swift in Sources */,
 				8E993EAD29E2EB1800D1A66F /* LiteralType+FloatConvention.swift in Sources */,
 				8E529D4A29DDF4FC0059BE4F /* BeverageCategoryCell.swift in Sources */,
+				8ED2C3A529F2BBD000C6617A /* PagingBannerView.swift in Sources */,
 				8EC8F61E29E02A61003F032E /* MenuOptionSectionView.swift in Sources */,
 				8E529D5429DEDA080059BE4F /* RecommendMenuCell.swift in Sources */,
 				8E529D4729DDF3F50059BE4F /* OrderCategoryView.swift in Sources */,
@@ -642,7 +646,7 @@
 		};
 		8E529CE929DD234C0059BE4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AA90B74C626B64ADD1AEDF1 /* Pods-StarbucksClone.debug.xcconfig */;
+			baseConfigurationReference = A013486561F83DEAC3CC67B2 /* Pods-StarbucksClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -672,7 +676,7 @@
 		};
 		8E529CEA29DD234C0059BE4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27C6B1E2F3CD4383E589BACC /* Pods-StarbucksClone.release.xcconfig */;
+			baseConfigurationReference = 1C81B9AB4BD1379EBFD55AA5 /* Pods-StarbucksClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

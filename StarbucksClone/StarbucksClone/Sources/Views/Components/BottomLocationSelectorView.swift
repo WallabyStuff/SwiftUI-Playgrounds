@@ -76,5 +76,6 @@ struct BottomLocationSelectorView: View {
 struct BottomLocationSelectorView_Previews: PreviewProvider {
   static var previews: some View {
     BottomLocationSelectorView()
+      .previewLayout(.sizeThatFits)
   }
 }
