@@ -13,9 +13,6 @@ struct ContentView: View {
   
   var body: some View {
     VStack {
-      Carousel(index: $index, items: MockItem.items) { item in
-        
-      }
     }
   }
 }

@@ -11,8 +11,6 @@
 		8ED2C39729F2B6E800C6617A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2C39629F2B6E800C6617A /* ContentView.swift */; };
 		8ED2C39929F2B6E900C6617A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2C39829F2B6E900C6617A /* Assets.xcassets */; };
 		8ED2C39C29F2B6E900C6617A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2C39B29F2B6E900C6617A /* Preview Assets.xcassets */; };
-		8ED2C3A329F2B92E00C6617A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2C3A229F2B92E00C6617A /* CardView.swift */; };
-		8ED2C3A729F2CA7000C6617A /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2C3A629F2CA7000C6617A /* Carousel.swift */; };
 		8ED2C3A929F2D29E00C6617A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2C3A829F2D29E00C6617A /* Item.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,8 +20,6 @@
 		8ED2C39629F2B6E800C6617A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8ED2C39829F2B6E900C6617A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ED2C39B29F2B6E900C6617A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8ED2C3A229F2B92E00C6617A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		8ED2C3A629F2CA7000C6617A /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		8ED2C3A829F2D29E00C6617A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,8 +55,6 @@
 			children = (
 				8ED2C39429F2B6E800C6617A /* SwiftUICarouselApp.swift */,
 				8ED2C39629F2B6E800C6617A /* ContentView.swift */,
-				8ED2C3A629F2CA7000C6617A /* Carousel.swift */,
-				8ED2C3A229F2B92E00C6617A /* CardView.swift */,
 				8ED2C39829F2B6E900C6617A /* Assets.xcassets */,
 				8ED2C39A29F2B6E900C6617A /* Preview Content */,
 				8ED2C3A829F2D29E00C6617A /* Item.swift */,
@@ -148,9 +142,7 @@
 			files = (
 				8ED2C3A929F2D29E00C6617A /* Item.swift in Sources */,
 				8ED2C39729F2B6E800C6617A /* ContentView.swift in Sources */,
-				8ED2C3A329F2B92E00C6617A /* CardView.swift in Sources */,
 				8ED2C39529F2B6E800C6617A /* SwiftUICarouselApp.swift in Sources */,
-				8ED2C3A729F2CA7000C6617A /* Carousel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

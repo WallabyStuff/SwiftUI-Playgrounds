@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E33EEE629FBC4C700931195 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E33EEE529FBC4C700931195 /* Carousel.swift */; };
 		8E4CA0E229E0769F001A6BDC /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */; };
 		8E4CA0E529E097DB001A6BDC /* Int+PriceExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */; };
 		8E4CA0E929E1B792001A6BDC /* bean_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CA0E829E1B792001A6BDC /* bean_loading.json */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		1C81B9AB4BD1379EBFD55AA5 /* Pods-StarbucksClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarbucksClone.release.xcconfig"; path = "Target Support Files/Pods-StarbucksClone/Pods-StarbucksClone.release.xcconfig"; sourceTree = "<group>"; };
+		8E33EEE529FBC4C700931195 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		8E4CA0E129E0769F001A6BDC /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		8E4CA0E429E097DB001A6BDC /* Int+PriceExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+PriceExpression.swift"; sourceTree = "<group>"; };
 		8E4CA0E829E1B792001A6BDC /* bean_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bean_loading.json; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				8E91288A29EFB841003650EC /* ScrollViewOffset.swift */,
 				8ED2C3A429F2BBD000C6617A /* PagingBannerView.swift */,
 				8ED2C3AA29F2DB3700C6617A /* MainBannerCarousel.swift */,
+				8E33EEE529FBC4C700931195 /* Carousel.swift */,
 				8E1312C629F179F300FBD0BA /* SegmentedControl */,
 				8E993EAF29E2F4AA00D1A66F /* Section */,
 				8E529D4829DDF4F40059BE4F /* Cells */,
@@ -462,7 +465,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,6 +501,7 @@
 				8E529D6829E00BC10059BE4F /* DescriptionTextBox.swift in Sources */,
 				8E67F27529E763AA005A148D /* CupOptionSegmentedControl.swift in Sources */,
 				8E4CA0EC29E1B8F0001A6BDC /* LottieView.swift in Sources */,
+				8E33EEE629FBC4C700931195 /* Carousel.swift in Sources */,
 				8E993EAD29E2EB1800D1A66F /* LiteralType+FloatConvention.swift in Sources */,
 				8E529D4A29DDF4FC0059BE4F /* BeverageCategoryCell.swift in Sources */,
 				8ED2C3A529F2BBD000C6617A /* PagingBannerView.swift in Sources */,

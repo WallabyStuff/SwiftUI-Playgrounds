@@ -14,6 +14,7 @@ class MainViewModel: ObservableObject {
   @Published var userName = ""
   @Published var locationName = ""
   @Published var mainBanner: [Banner.MainBanner] = []
+  @Published var mainBannerIndex = 0
   @Published var recommendMenu: [Beverage] = []
   @Published var event: [Event] = []
   
